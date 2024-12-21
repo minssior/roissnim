@@ -1,0 +1,1937 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    overflow-x: scroll; /* 가로 스크롤을 항상 가능하게 설정 */
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease; 
+    background-color: rgb(232, 232, 232);
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./FreeMonospaced.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.trail {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background:black;
+    border: 0.1px dotted black;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+/* 스크롤바 전체 스타일 */
+::-webkit-scrollbar {
+    width: 12px; /* 세로 스크롤바 너비 */
+    height: 12px; /* 가로 스크롤바 높이 */
+}
+
+/* 스크롤바 트랙 (배경) 스타일 */
+::-webkit-scrollbar-track {
+    background: rgb(232, 232, 232); /* 스크롤바 배경색 */
+    border-radius: 10px;
+}
+
+/* 스크롤바 핸들 스타일 */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(232, 232, 232); /* 스크롤바 색상 */
+    
+   
+}
+
+/* 스크롤바 핸들을 누르고 있을 때 스타일 */
+::-webkit-scrollbar-thumb:active {
+    background-color: rgb(0, 255, 247); /* 스크롤바 핸들 색상 변경 */
+}
+
+
+.scaled {
+    transform: scale(0.42); 
+    transform-origin: top left; 
+}
+
+@keyframes sparkle {
+    0%, 100% { color: #000000; }  /* 원하는 색상으로 설정하세요 */
+    50% { color: #ffffff; }        /* 중간에 색상을 밝게 설정 */
+}
+
+button {
+    position: absolute;
+    top: 20px;
+    right: 6px;
+    padding: 10px 20px;
+    font-size: 16px;   
+    background-color: rgb(255, 255, 255);  
+    border: 0.5px solid rgb(53, 53, 53);
+   animation: sparkle 0.9s infinite;
+
+}
+
+#showbutton {
+    z-index: 900;
+    position: fixed;
+    width: 450px;
+    height: 45px;
+    top: 20px;
+    right: 970px;
+    padding: 10px 30px;
+    font-size: 16px;   
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 255, 247, 0.716);  
+    border: 0.5px solid rgba(255, 255, 255, 0);
+    animation: none; /* 애니메이션 제거 */
+    font-family: 'MyCustomFont';
+
+}
+.hidden-elements {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s 1s ;
+    
+}
+
+/* 활성화된 상태: 표시 */
+.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease;
+}
+
+/* 예제 요소 스타일 */
+.element {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #ffdfba;
+    border-radius: 5px;
+}
+
+.go {
+    z-index: 300;
+    position: absolute;
+    top: 20px;
+    left: 780px;
+    font-size: 15px;
+    word-spacing: -5px; 
+    transition: font-weight 0.3s ease, text-shadow 0.3s ease;
+}
+.go:hover  {
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+a {
+    color: inherit; /* 부모 요소의 색상을 상속받도록 설정 */
+    text-decoration: none; /* 기본적으로 밑줄을 없앰 */
+}
+
+canvas {
+    display: block;
+}
+.info-1{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 150px; 
+    left: 80px;
+    z-index: 700;
+}
+
+.info-2{
+    height: 200px; 
+    width: auto;
+    border: 0.5px solid black;
+    position: absolute;
+    top: 410px; 
+    left: 80px;
+    z-index: 700;
+}
+
+.info-2-1{
+    height: 200px;
+    width: auto; 
+    border: 0.5px solid black;
+    position: absolute;
+    top: 410px; 
+    left: 375px;
+    z-index: 700;
+}
+
+.info-3{
+    height: 490px; 
+    width: auto; 
+    border: 0.5px solid black;
+    position: absolute;
+    top: 670px; 
+    left: 80px;
+    z-index: 700;
+}
+
+
+.info-4{
+    height: 200px; 
+    width: auto; 
+    border: 0.5px solid black;
+    position: absolute;
+    top: 1230px; 
+    left: 80px;
+    z-index: 700;
+}
+
+.mo-1{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 150px; 
+    left: 760px;
+    z-index: 700;
+}
+
+.mo-2{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px; 
+    left: 760px;
+    z-index: 700;
+}
+
+.mo-3{
+    height: 380px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 670px; 
+    left: 760px;
+    z-index: 700;
+}
+
+.ed-1{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 150px; 
+    left: 1375px;
+    z-index: 700;
+}
+
+.ed-2{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px; 
+    left: 1375px;
+    z-index: 700;
+}
+
+.ed-3{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 670px; 
+    left: 1375px;
+    z-index: 700;
+}
+
+
+.ty-1{
+    height: 170px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 1080px; 
+    left: 1375px;
+    z-index: 700;
+}
+
+.ty-2{
+    height: 170px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 1080px; 
+    left: 1580px;
+    z-index: 700;
+}
+
+.ty-3{
+    height: 170px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 1290px; 
+    left: 1375px;
+    z-index: 700;
+}
+
+.ty-4{
+    height: 170px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 1290px; 
+    left: 1580px;
+}
+
+.ty-5{
+    height: 170px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 1500px; 
+    left: 1375px;
+    z-index: 700;
+}
+
+.ty-6{
+    height: 170px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 1500px; 
+    left: 1580px;
+    z-index: 700;
+}
+
+.gr-1{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 150px; 
+    left: 2030px;
+    opacity: 1; /* 기본적으로 투명 */
+    transition: opacity 0.5s ease; /* 전환 효과 */
+    z-index: 700;
+}
+.gr-1.fade {
+    opacity: 0.2; /* 원하는 투명도로 설정 */
+}
+
+.gr-1-box {
+    height: 200px;
+    width: 142px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 150px;
+    left: 2030px;
+    background-color: transparent; 
+    opacity: 1; 
+}
+
+.gr-2{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 150px; 
+    left: 2185px;
+    opacity: 1; /* 기본적으로 투명 */
+    transition: opacity 0.5s ease; /* 전환 효과 */
+    z-index: 700;
+}
+.gr-2.fade {
+    opacity: 0.2; /* 원하는 투명도로 설정 */
+}
+
+.gr-2-box {
+    height: 200px;
+    width: 142px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 150px;
+    left: 2185px;
+    background-color: transparent; /* 필요에 따라 색상 지정 가능 */
+    opacity: 1; /* 원한다면 불투명도 조절 */
+}
+.gr-3{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px; 
+    left: 2030px;
+    opacity: 1; /* 기본적으로 투명 */
+    transition: opacity 0.5s ease; /* 전환 효과 */
+    z-index: 700;
+}
+.gr-3.fade {
+    opacity: 0.2; /* 원하는 투명도로 설정 */
+}
+
+.gr-3-box {
+    height: 200px;
+    width: 142px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px;
+    left: 2030px;
+    background-color: transparent; /* 필요에 따라 색상 지정 가능 */
+    opacity: 1; /* 원한다면 불투명도 조절 */
+}
+
+.gr-4{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px; 
+    left: 2185px;
+    opacity: 1; /* 기본적으로 투명 */
+    transition: opacity 0.5s ease; /* 전환 효과 */
+    z-index: 700;
+}
+.gr-4.fade {
+    opacity: 0.2; /* 원하는 투명도로 설정 */
+}
+
+.gr-4-box {
+    height: 200px;
+    width: 142px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px;
+    left: 2185px;
+    background-color: transparent; /* 필요에 따라 색상 지정 가능 */
+    opacity: 1; /* 원한다면 불투명도 조절 */
+    z-index: 700;
+}
+.gr-5{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 670px; 
+    left: 2030px;
+    opacity: 1; /* 기본적으로 투명 */
+    transition: opacity 0.5s ease; /* 전환 효과 */
+    z-index: 700;
+}
+.gr-5.fade {
+    opacity: 0.2; /* 원하는 투명도로 설정 */
+}
+
+.gr-5-box {
+    height: 200px;
+    width: 142px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 670px;
+    left: 2030px;
+    background-color: transparent; /* 필요에 따라 색상 지정 가능 */
+    opacity: 1; /* 원한다면 불투명도 조절 */
+}
+
+.gr-6{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 670px; 
+    left: 2185px;
+    opacity: 1; /* 기본적으로 투명 */
+    transition: opacity 0.5s ease; /* 전환 효과 */
+    z-index: 700;
+}
+.gr-6.fade {
+    opacity: 0.2; /* 원하는 투명도로 설정 */
+}
+
+.gr-6-box {
+    height: 200px;
+    width: 142px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 670px;
+    left: 2185px;
+    background-color: transparent; /* 필요에 따라 색상 지정 가능 */
+    opacity: 1; /* 원한다면 불투명도 조절 */
+}
+.gr-7{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 930px; 
+    left: 2030px;
+    z-index: 700;
+}
+
+.gr-8{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 1190px; 
+    left: 2030px;
+    z-index: 700;
+}
+
+.gr-9{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 150px; 
+    left: 2395px;
+    z-index: 700;
+}
+
+.gr-10{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px; 
+    left: 2395px;
+    z-index: 700;
+}
+
+.gr-11{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 670px; 
+    left: 2395px;
+    z-index: 700;
+}
+
+.gr-12{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 670px; 
+    left: 2550px;
+    z-index: 700;
+}
+
+.gr-13{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 930px; 
+    left: 2395px;
+    z-index: 700;
+}
+
+.gr-14{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 930px; 
+    left: 2692px;
+    z-index: 700;
+}
+
+.gr-15{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 1190px; 
+    left: 2395px;
+    z-index: 700;
+}
+
+.gr-16{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 1190px; 
+    left: 2692px;
+    z-index: 700;
+}
+
+.br-1{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 150px; 
+    left: 3192px;
+    z-index: 700;
+}
+
+.br-2{
+    height: 200px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px; 
+    left: 3192px;
+    z-index: 700;
+}
+
+.w-1{
+    height: 180px; 
+    width: auto; 
+    border: 0.1px solid black;
+    position: absolute;
+    top: 930px; 
+    left: 3192px;
+    z-index: 700;
+}
+
+.l{
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 93px; 
+    left: 80px;
+}
+
+.l-1{
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 93px; 
+    left: 760px;
+}
+
+.l-2{
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 93px; 
+    left: 1375px;
+}
+
+.l-3{
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 1023px; 
+    left: 1375px;
+}
+
+.l-4{
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 93px; 
+    left: 3192px;
+}
+
+
+.l-5{
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 873px; 
+    left: 3192px;
+}
+
+.l-6{
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 93px; 
+    left: 2030px;
+}
+
+.hidden-elements {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.hidden-elements.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.e {
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 93px; 
+    left: 80px; 
+}
+
+.e-1 {
+    z-index: 100;
+    height: 9px; 
+    width: auto; 
+    position: absolute; 
+    top: 93px; 
+    left: 760px; /* 위치 조정 */
+}
+
+.e-2 {
+    z-index: 100;
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 93px; 
+    left: 1375px;
+}
+
+.e-3 {
+    z-index: 100;
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 1023px; 
+    left: 1375px;
+}
+
+.e-4 {
+    z-index: 100;
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 93px; 
+    left: 2030px;
+}
+
+.e-5 {
+    z-index: 100;
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 93px; 
+    left: 3192px;
+}
+
+.e-6 {
+    z-index: 100;
+    height: 9px; 
+    width: auto; 
+    position: absolute;
+    top: 873px; 
+    left: 3192px; 
+}
+
+.i-1 {
+    font-size: 16px;
+    z-index: 100;
+    position: absolute;
+    top: 72px; 
+    left: 172px; 
+    word-spacing: -5px; 
+    transition: font-weight 0.3s ease, text-shadow 0.5s ease;
+}
+.i-1:hover{
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+    
+}
+/* 매체 변환 인포메이션 디자인 */
+.i1 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 195px; 
+    left: 266px; 
+    word-spacing: -3px; 
+    
+}
+
+.i1 p {
+    line-height: 1.5; /* 줄 간격을 줄임 */
+}
+
+.i1 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+.text-container {
+    position: relative; /* p 요소의 위치 조정 가능 */
+    top: -10px; /* 필요한 위치 조정 */
+    left: -10px; 
+}
+
+.scale-1 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: -65px; 
+    left: -30px; 
+    word-spacing: -3px; 
+    white-space: nowrap;
+    
+}
+
+
+.curved-line {
+    z-index: -100;
+    position: absolute;
+    top: -85px; /* 윗면에 맞게 위치 조정 */
+    left: -186px;
+    stroke-width:0.1px
+}
+
+.test5 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: -45px; 
+    left: -283px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+
+.curved-line-right {
+    position: absolute;
+    top: -45px; /* 위쪽 호선과 같은 수직 위치 */
+    right: 181px; /* 오른쪽으로 위치 조정 */
+    stroke-width: 0.1px;
+}
+
+/* 로또 인포메이션 */
+.i2 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 505px; 
+    left: 540px; 
+    word-spacing: 0px; 
+    
+}
+
+.i2 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+
+.i2 p {
+    line-height: 1.5; /* 줄 간격을 줄임 */
+}
+
+
+.above-box {
+    z-index: -100;
+    width: 104px;
+    height: 22px;
+    position: absolute; /* 절대 위치 지정 */
+    top: 57px; 
+    left: -9px; 
+    background-color: rgb(0, 255, 247); 
+    border-radius: 6px;
+    
+}
+
+
+.curved-line2 {
+    z-index: 100;
+    position: absolute;
+    top: -135px; /* 윗면에 맞게 위치 조정 */
+    left: -165px;
+    stroke-width:0.1px
+}
+
+.curved-line3 {
+    z-index: 100;
+    position: absolute;
+    top: -135px; /* 윗면에 맞게 위치 조정 */
+    left: -460px;
+    stroke-width:0.1px
+}
+
+.scale-2 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 370px; 
+    left: 196px; 
+    word-spacing: -3px; 
+    white-space: nowrap;
+    
+}
+
+
+.scale-2 p:nth-child(2) {
+    position: relative; /* 또는 absolute */
+    top: -25px; /* 두 번째 p를 아래로 이동 */
+    left: 169px; /* 두 번째 p를 오른쪽으로 이동 */
+}
+
+.scale-2 p:nth-child(3) {
+    position: relative; /* 또는 absolute */
+    top: -50px; /* 세 번째 p를 아래로 이동 */
+    left: 220px; /* 세 번째 p를 오른쪽으로 이동 */
+}
+
+/* 통계 변환 디자인 */
+.i3 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 870px; 
+    left: 320px; 
+    word-spacing: 0px; 
+    
+}
+
+.i3 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+
+.i3 p {
+    line-height: 1.5; /* 줄 간격을 줄임 */
+}
+
+
+
+
+.above-box2 {
+    z-index: -100;
+    width: 104px;
+    height: 22px;
+    position: absolute; /* 절대 위치 지정 */
+    top: 57px; 
+    left: -8px; 
+    background-color: rgb(0, 255, 76); 
+    border-radius: 6px;
+    
+}
+
+.test {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 670px; 
+    left: 15px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.test2 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 570px; 
+    left: -20px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+
+/* 신문 인포메이션 */
+.i4 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 1273px; 
+    left: 410px; 
+    word-spacing: 0px; 
+    
+}
+
+.i4 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+
+.i4 p:nth-child(4) {
+    position: absolute;
+    top: 260px; 
+    left: -230px; 
+    white-space: nowrap;
+   }
+
+.i4 p:nth-child(5) {
+    position: absolute;
+    top: 260px; 
+    left: 0px; 
+    white-space: nowrap;
+   }
+
+
+
+.i4 p {
+    line-height: 1.5; /* 줄 간격을 줄임 */
+}
+
+.border-box {
+    position: absolute;
+    top: 1450px;
+    left: 80px;
+    height: 200px;
+    width: 282px;
+    border: 0.5px solid black;
+    z-index: 100;
+}
+
+.test3 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 1230px; 
+    left: 123px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.i-2 {
+    font-size: 16px;
+    z-index: 100;
+    position: absolute;
+    top: 72px; 
+    left: 857px; 
+    word-spacing: -5px; 
+    transition: font-weight 0.3s ease, text-shadow 0.5s ease;
+}
+
+.i-2:hover{
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+    
+}
+
+.test4 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 150px; 
+    left: 662px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.m1 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 195px; 
+    left: 936px; 
+    word-spacing: 0px; 
+    
+}
+
+.m1 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+
+
+.m2 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 455px; 
+    left: 1149px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.m2 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+.test6 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 310px; 
+    left: 660px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+
+
+.m3 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 788px; 
+    left: 989px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.sticker {
+z-index: 999;
+height: 60px; 
+width: auto; 
+position: absolute;
+top: 453px; 
+left: 720px;
+opacity: 0.3;
+transition: opacity 0.3s ease; 
+}
+
+.sticker:active  {
+    opacity: 1; /* 호버 시 투명도 50% */
+}
+
+.sticker2 {
+    z-index: 999;
+    height: 70px; 
+    width: auto; 
+    position: absolute;
+    top: 368px; 
+    left: 1076px;
+    transform: rotate(30deg);
+    opacity: 0.3;
+    transition: opacity 0.3s ease; 
+    }
+
+.sticker2:active  {
+        opacity: 1; /* 호버 시 투명도 50% */
+    }
+
+.sticker3 {
+        z-index: 999;
+        height: 55px; 
+        width: auto; 
+        position: absolute;
+        top: 565px; 
+        left: 1233px;
+        transform: rotate(-30deg);
+        opacity: 0.3;
+        transition: opacity 0.3s ease; 
+        }
+    
+.sticker3:active  {
+            opacity: 1; /* 호버 시 투명도 50% */
+        }   
+
+.m3 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+
+.test7 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 570px; 
+    left: 660px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+
+.test8 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 670px; 
+    left: 693px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+
+.test9 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 150px; 
+    left: 1418px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.test10 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 410px; 
+    left: 1418px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.test11 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 670px; 
+    left: 1419px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.test12 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 310px; 
+    left: 1417px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.test13 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 50px; 
+    left: 1275px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.test14 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 570px; 
+    left: 1275px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.test15 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 570px; 
+    left: 1419px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.e1 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 195px; 
+    left: 1689px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.e1 p:nth-child(2) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.e2 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 455px; 
+    left: 1689px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.e2 p:nth-child(2) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.e3 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 710px; 
+    left: 1689px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.e3 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+
+
+
+
+
+
+
+.i-3 {
+    font-size: 16px;
+    z-index: 100;
+    position: absolute;
+    top: 72px; 
+    left: 1472px; 
+    word-spacing: -5px; 
+    white-space: nowrap; 
+    transition: font-weight 0.3s ease, text-shadow 0.5s ease;
+}
+
+.i-3:hover{
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.i-4 {
+    font-size: 16px;
+    z-index: 100;
+    position: absolute;
+    top: 1002px; 
+    left: 1472px; 
+    word-spacing: -5px; 
+    white-space: nowrap; 
+    transition: font-weight 0.3s ease, text-shadow 0.5s ease;
+}
+
+.i-4:hover{
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+
+.n-1 {
+    font-size: 14.3px;
+    z-index: 100;
+    position: absolute;
+    top: 1047px; 
+    left: 1375px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+.n1 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 1070px; 
+    left: 1781px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.n1 p:nth-child(1) {
+    text-indent: -8px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.n1 p:nth-child(3) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+
+
+.n-2 {
+    font-size: 14.3px;
+    z-index: 100;
+    position: absolute;
+    top: 1047px; 
+    left: 1580px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+.n2 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 1177px; 
+    left: 1781px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+   
+    
+}
+
+.n2 p:nth-child(1) {
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.n2 p:nth-child(3) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.n-3 {
+    font-size: 14.3px;
+    z-index: 100;
+    position: absolute;
+    top: 1256px; 
+    left: 1375px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+.n3 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 1280px; 
+    left: 1781px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.n3 p:nth-child(1) {
+    text-indent: -8px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.n3 p:nth-child(3) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+.n-4 {
+    font-size: 14.3px;
+    z-index: 100;
+    position: absolute;
+    top: 1256px; 
+    left: 1580px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+} 
+.n4 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 1387px; 
+    left: 1781px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+   
+    
+}
+
+.n4 p:nth-child(1) {
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.n4 p:nth-child(3) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+
+.n-5 {
+    font-size: 14.3px;
+    z-index: 100;
+    position: absolute;
+    top: 1465px; 
+    left: 1375px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+.n5 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 1490px; 
+    left: 1781px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.n5 p:nth-child(1) {
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.n5 p:nth-child(3) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+.n-6 {
+    font-size: 14.3px;
+    z-index: 100;
+    position: absolute;
+    top: 1465px; 
+    left: 1580px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+.n6 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 1597px; 
+    left: 1781px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.n6 p:nth-child(1) {
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.n6 p:nth-child(3) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.i-5 {
+    font-size: 16px;
+    z-index: 900;
+    position: absolute;
+    top: 72px; 
+    left: 2125px; 
+    word-spacing: -5px; 
+    white-space: nowrap; 
+    transition: font-weight 0.3s ease, text-shadow 0.5s ease;
+}
+
+.i-5:hover{
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+.test16 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 50px; 
+    left: 2085px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+.test17 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 150px; 
+    left: 2088px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+.test18 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 310px; 
+    left: 2085px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+.test19 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 410px; 
+    left: 2088px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+.test20 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 570px; 
+    left: 2085px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+.test21 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 670px; 
+    left: 2088px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.test22 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 930px; 
+    left: 1932px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.test23 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 1190px; 
+    left: 1932px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.g0 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 195px; 
+    left: 2085px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+   
+    
+}
+
+
+.g0 p:nth-child(2) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.g0-1 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 455px; 
+    left: 2085px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+   
+    
+}
+
+
+.g0-1 p:nth-child(2) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.g0-2 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 715px; 
+    left: 2085px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+   
+    
+}
+
+
+.g0-2 p:nth-child(2) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+
+
+.g1 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 960px; 
+    left: 2210px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.g1 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+
+.g1 p {
+    line-height: 1.5; /* 줄 간격을 줄임 */
+}
+
+
+
+
+
+.above-box3 {
+    z-index: -100;
+    width: 104px;
+    height: 22px;
+    position: absolute; /* 절대 위치 지정 */
+    top: 1012px; 
+    left: 2201px; 
+    background-color: rgb(246, 255, 0); 
+    border-radius: 6px;
+    
+}
+.test24 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 150px; 
+    left: 2298px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+.g2 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 1222px; 
+    left: 2210px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    word-wrap: break-word;
+    
+}
+
+.g2 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+
+.g2 p {
+    line-height: 1.5; /* 줄 간격을 줄임 */
+}
+
+
+.test25 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 410px; 
+    left: 2298px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+.g3 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 197px; 
+    left: 2570px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    word-wrap: break-word;
+    
+}
+
+.g3 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+
+.g3 p {
+    line-height: 1.5; /* 줄 간격을 줄임 */
+}
+
+.test26 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 570px; 
+    left: 2295px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+.g4 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 470px; 
+    left: 2570px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.g4 p:nth-child(2) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.test27 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 570px; 
+    left: 2521px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+.g5 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 730px; 
+    left: 2723px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.g5 p:nth-child(2) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.test28 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 670px; 
+    left: 2453px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+.g6 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 982px; 
+    left: 3005px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    line-height: 1.8;
+    
+}
+
+.g6 p:nth-child(2) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+.test29 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 930px; 
+    left: 2736px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+.g7 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 1232px; 
+    left: 3005px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    
+}
+
+.g7 p:nth-child(2) {
+    text-indent: -4px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    font-size: 11.2px;
+    font-weight: 300;
+}
+
+.test30 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 830px; 
+    left: 2296px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.test31 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 1090px; 
+    left: 2296px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.test32 {
+    border:  none;/* SVG 경계를 추가하여 확인할 수 있게 함 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 1190px; 
+    left: 2736px; 
+    z-index: 100;
+    stroke-width: 0.4px;
+}
+
+.i-6 {
+    font-size: 16px;
+    z-index: 100;
+    position: absolute;
+    top: 72px; 
+    left: 3290px; 
+    word-spacing: -5px; 
+    white-space: nowrap; 
+    transition: font-weight 0.3s ease, text-shadow 0.5s ease;
+}
+
+.i-6:hover{
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+.b1 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 220px; 
+    left: 3360px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    word-wrap: break-word;
+    
+}
+
+
+.b1 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+.b2 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 480px; 
+    left: 3500px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    word-wrap: break-word;
+    
+}
+
+
+.b2 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+.i-7 {
+    font-size: 16px;
+    z-index: 100;
+    position: absolute;
+    top: 852px; 
+    left: 3290px; 
+    word-spacing: -5px; 
+    white-space: nowrap; 
+    transition: font-weight 0.3s ease, text-shadow 0.5s ease;
+}
+
+.i-7:hover{
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.w1 {
+    font-size: 11.7px;
+    z-index: 100;
+    position: absolute;
+    top: 995px; 
+    left: 3540px; 
+    word-spacing: 0px; 
+    white-space: nowrap;
+    word-wrap: break-word;
+    
+}
+
+.w1 p:nth-child(2) {
+    text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+}
+
+.trail {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background:black;
+    border: 0.1px dotted black;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+

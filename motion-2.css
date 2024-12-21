@@ -1,0 +1,732 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./FreeMonospaced.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    color: inherit; /* 부모 요소의 색상을 상속받도록 설정 */
+    text-decoration: none; /* 기본적으로 밑줄을 없앰 */
+}
+
+body, html {
+    width: fit-content;  /* 가로로 넓게 설정 */
+ 
+    overflow-x: scroll;
+    overflow-y: hidden;
+   font-family: 'MyCustomFont', sans-serif;
+    background-color: rgb(232, 232, 232);
+}
+
+/* 스크롤바 전체 스타일 */
+::-webkit-scrollbar {
+    width: 12px; /* 세로 스크롤바 너비 */
+    height: 12px; /* 가로 스크롤바 높이 */
+}
+
+/* 스크롤바 트랙 (배경) 스타일 */
+::-webkit-scrollbar-track {
+    background: rgb(232, 232, 232); /* 스크롤바 배경색 */
+    border-radius: 10px;
+}
+
+/* 스크롤바 핸들 스타일 */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(232, 232, 232); /* 스크롤바 색상 */
+    
+   
+}
+
+/* 스크롤바 핸들을 누르고 있을 때 스타일 */
+::-webkit-scrollbar-thumb:active {
+    background-color: rgb(0, 255, 247); /* 스크롤바 핸들 색상 변경 */
+}
+
+
+.main-3-1{
+    font-weight: 900;
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    font-size: 16px;
+    word-spacing: -5px; 
+}
+.main-3-1-1{
+    font-weight: 900;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    font-size: 16px;
+    word-spacing: -5px; 
+}
+
+
+
+.main-3-1-2{
+    font-weight: 900;
+    position: absolute;
+    top: 5px;
+    right: 18px;
+    font-size: 16px;
+    word-spacing: -5px; 
+}
+.main-3-1-2:hover{
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.pdf-frame {
+    width: 80%; /* 화면의 80%를 차지 */
+    height: 90%; /* 화면의 90%를 차지 */
+    position: absolute; /* 절대 위치 지정 */
+    bottom: 35px; /* 화면 아래에서 20px 띄움 */
+    left: 10%; /* 화면의 10%에서 시작 */
+    z-index: 0; /* 다른 요소 위에 표시 */
+    border: none; /* 테두리 제거 */
+}
+
+.vtest {
+    position: absolute;
+    top: 120px;
+    left: 227px;
+    width: auto;
+    height: 600px;
+}
+
+.vtest2 {
+    position: absolute;
+    top: 60px;
+    left: 2328px;
+    width: auto;
+    height: 350px;
+    z-index: 100;
+}
+
+#emoji-button {
+    position: absolute;
+    left: 587px;
+    top: 45px;
+    background-color: #fff423; /* 배경색: 초록색 */
+    color: rgb(0, 0, 0); /* 글자색: 흰색 */
+    padding: 10px 15px; /* 안쪽 여백 */
+    font-size: 14px; /* 글자 크기 */
+    border: none; /* 테두리 제거 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+    transition: background-color 0.3s, transform 0.2s; /* 부드러운 전환 효과 */
+  }
+
+  #emoji-button:hover {
+    background-color: #00ff0d; /* 마우스 호버 시 색상 변경 */
+    transform: scale(1.05); /* 약간 확대 */
+  }
+
+  #emoji-button:active {
+    background-color: #ff00dd; /* 클릭 시 색상 변경 */
+    transform: scale(0.95); /* 클릭 시 약간 축소 */
+  }
+
+  audio {
+    position: absolute;
+    bottom: 13px ;
+    left: 27px;
+    width: 300px;
+    background-color:rgb(255, 255, 255);
+    padding: 15px;
+}
+
+.bgm {
+    font-weight: 400;
+    position: absolute;
+    bottom: 30px;
+    left: 360px;
+    font-size: 13.5px;
+    word-spacing: 1px; 
+    letter-spacing: 1px;
+}
+
+.bgm-2 {
+    font-weight: 900;
+    position: absolute;
+    bottom: 58px;
+    left: 4px;
+    font-size: 13.5px;
+    word-spacing: 5px; 
+    transform: rotate(-25deg);
+   
+
+}
+
+.r{
+    position: absolute;
+    top: -180px ;
+    left: 2145px; ;
+    width: auto;
+    height: 740px ;
+   
+}
+
+.r-1{
+    position: absolute;
+    top: -70px;
+    left: 2162px; 
+    width: auto;
+    height: 620px ;
+    z-index: -100;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 800px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+.ne-7 {
+    width: 560px;
+    height: auto; 
+    position: absolute;
+    top: 30px;
+    left:10px; 
+   
+   
+}
+
+.ne-8 {
+    width: 440px;
+    height: auto; 
+    position: absolute;
+    bottom: -200px;
+    left: 2560px; 
+    filter: blur(5px); /* 기본 상태에서 흐리게 설정 */
+    transition: filter 0.3s ease; 
+    transform: rotate(90deg);
+    
+    
+    z-index: -100;
+}
+
+.ne-8:hover {
+    filter: blur(0); /* 마우스를 올렸을 때 선명해짐 */
+}
+
+.ne-9 {
+    width: 520px;
+    height: auto; 
+    position: absolute;
+    top: -20px;
+    left: 1480px; 
+    filter: blur(5px); /* 기본 상태에서 흐리게 설정 */
+    transition: filter 0.3s ease; /* 효과의 부드러운 전환 */
+    z-index: -100;
+}
+
+.ne-9:hover {
+    filter: blur(0); /* 마우스를 올렸을 때 선명해짐 */
+}
+.main-3-2
+     {
+        font-size: 12.3px;
+        z-index: 100;
+        position: absolute;
+        top: 30px; 
+        left: 1532px; 
+        word-spacing: -3px; 
+        white-space: nowrap;
+       
+        
+    }
+    
+    .main-3-2 p {
+        line-height: 2; /* 줄 간격을 줄임 */
+    }
+    
+    .main-3-2 p:nth-child(2) {
+        text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    }
+    .main-3-3
+    {
+       font-size: 12.1px;
+       z-index: 100;
+       position: absolute;
+       bottom: 210px; 
+       left: 1554px; 
+       word-spacing: -3px; 
+       line-height: 1.5;
+       letter-spacing: 0.4px;
+       font-weight: 320;
+       white-space: nowrap;
+       
+   }
+
+   .main-3-4
+   {
+      font-size: 12.1px;
+      z-index: 100;
+      position: absolute;
+      bottom: 113px; 
+      left: 1554px; 
+      word-spacing: -3px; 
+      line-height: 1.5;
+      letter-spacing: 0.4px;
+      font-weight: 320;
+      white-space: nowrap;
+      
+  }
+
+
+  .main-3-4-1
+  {
+     font-size: 12.1px;
+     z-index: 100;
+     position: absolute;
+     bottom:20px; 
+     left: 1554px; 
+     word-spacing: -3px; 
+     line-height: 1.5;
+     letter-spacing: 0.4px;
+     font-weight: 320;
+     white-space: nowrap;
+     
+ }
+ .sticker {
+    z-index: 999;
+    height: 90px; 
+    width: auto; 
+    position: absolute;
+    top: 470px; 
+    left: 1520px;
+    opacity: 0.3;
+    transition: opacity 0.3s ease; 
+    transform: scaleX(-1) rotate(20deg);
+    }
+    
+    .sticker:active  {
+        opacity: 1; /* 호버 시 투명도 50% */
+    }
+    
+    .sticker2 {
+        z-index: 999;
+        height: 115px; 
+        width: auto; 
+        position: absolute;
+        top: 438px; 
+        left: 2176px;
+        transform: rotate(30deg);
+        opacity: 0.3;
+        transition: opacity 0.3s ease; 
+        }
+    
+    .sticker2:active  {
+            opacity: 1; /* 호버 시 투명도 50% */
+        }
+    
+    .sticker3 {
+            z-index: 999;
+            height: 105px; 
+            width: auto; 
+            position: absolute;
+            top: 565px; 
+            left: 1833px;
+            transform: rotate(-30deg);
+            opacity: 0.3;
+            transition: opacity 0.3s ease; 
+            }
+        
+    .sticker3:active  {
+                opacity: 1; /* 호버 시 투명도 50% */
+            }   
+ 
+    .sticker4 {
+                z-index: 999;
+                height: 355px; 
+                width: auto; 
+                position: absolute;
+                top: 565px; 
+                left: 2733px;
+                transform: rotate(-30deg);
+                opacity: 0.3;
+                transition: opacity 0.3s ease; 
+                }
+            
+    .sticker4:active  {
+                    opacity: 1; /* 호버 시 투명도 50% */
+    }    
+
+    .custom-iframe {
+        width: 580px; /* 가로 크기 */
+        height: 370px; /* 세로 크기 */
+        position: absolute; 
+        top: 240px;
+        left: 3540px;
+        overflow: hidden; /* 내부 스크롤 숨김 */
+        transition: transform 0.7s ease;
+    }
+    
+   
+      .image-container {
+        position: relative;
+    }
+    
+/* 컨테이너 이동 */
+.image-container {
+    position: absolute; /* 위치를 고정 */
+    left: 3100px; /* 오른쪽으로 3000px 이동 */
+    bottom: 20px; /* 원하는 위치에 배치 */
+}
+
+/* 메인 이미지 스타일 */
+.r-bg {
+    z-index: 10;
+    height: 175px;
+    width: auto;
+    position: relative;
+}
+
+/* 추가 이미지 스타일 */
+.additional-images {
+    display: flex;
+    position: relative;
+    gap: 10px; /* 이미지 간격 */
+}
+
+.additional-images img {
+    height: 125px;
+    width: auto;
+}
+
+/* 숨김 상태 */
+.hidden {
+    display: none; /* 추가 이미지를 기본적으로 숨김 */
+}
+
+.sticker5 {
+    z-index: 1999;
+    height: 355px;
+    width: auto;
+    position: absolute;
+    top: 60px;
+    left: 4133px;
+    transition: transform 0.7s ease;
+}
+
+
+.sticker5:hover {
+    transform: scale(1.2) 
+    translateX(-40px) 
+    translateY(-30px); /* 변환 효과들을 공백으로 구분 */
+    opacity: 1; /* 투명도를 유지 */
+}
+
+
+.sticker6 {
+    z-index: 999;
+    height: 355px; 
+    width: auto; 
+    position: absolute;
+    top: 0px; 
+    left: 3023px;
+    opacity: 0.7s ease;
+    transition: transform 0.7s ease;
+  
+    }    
+.sticker6:hover {
+        transform: scale(1.2) 
+        translateX(10px) ;
+        opacity: 1; /* 투명도를 유지 */
+    }
+                
+  .main-3-5
+  {
+     font-size: 12.1px;
+     z-index: 100;
+     position: absolute;
+     top: 740px; 
+     left: 1554px; 
+     word-spacing: -3px; 
+     line-height: 1.5;
+     letter-spacing: 0.4px;
+     font-weight: 320;
+     white-space: nowrap;
+     
+ }
+
+ .hover-popup {
+    display: none; /* 기본적으로 숨김 */
+    position: absolute;
+    top: -230px; /* 부모 기준 아래로 배치 */
+    left: 300px; /* 부모 기준 수평 정렬 */
+    z-index: 200; /* 팝업이 다른 요소 위에 표시 */
+    background: rgba(255, 255, 255, 0.36); /* 팝업 배경색 */
+    border: 1px solid #ffffff; /* 팝업 테두리 */
+    padding: 5px;
+    box-shadow: 0px 4px 8px  rgba(0, 255, 247, 0.266); ; /* 그림자 효과 */
+}
+
+.main-3-5:hover .hover-popup {
+    display: block; /* 호버 시 팝업 표시 */
+}
+
+/* 이미지에 추가적인 스타일 적용 */
+.popup-image {
+    max-width: 350px; /* 이미지 최대 크기 제한 */
+    height: auto; /* 비율 유지 */
+    border-radius: 3px; /* 둥근 테두리 효과 */
+   
+}
+
+.ne-10 {
+    width: 640px;
+    height: auto; 
+    position: absolute;
+    top: -10px;
+    left: 3120px;
+    transition: transform 0.7s ease;
+    z-index: -100;
+}
+.ne-10:hover {
+    transform: scale(1.2) translateX(40px); /* 이미지를 1.5배로 확대 */
+    opacity: 1; 
+    overflow-y: scroll;
+  }
+
+  .above-box4 {
+    z-index: -99;
+    width: 130px;
+    height: 25px;
+    position: absolute; /* 절대 위치 지정 */
+    top: 626px; 
+    left: 3430px; 
+    background-color: rgb(0, 255, 247); 
+    border-radius: 6px;
+    
+}
+
+.video-4 {
+        
+    position: absolute;
+    top: 630px;
+    left: 3444px;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    font-weight: 320;
+    z-index: 100;
+    color: black;
+    white-space: nowrap;
+
+
+}
+
+.video-1 {
+        
+    position: absolute;
+    top: 37px;
+    left: 3626px;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    font-weight: 320;
+    z-index: 100;
+    color: black;
+    white-space: nowrap;
+
+
+}
+.above-box3 {
+    z-index: -99;
+    width: 200px;
+    height: 25px;
+    position: absolute; /* 절대 위치 지정 */
+    top: 36px; 
+    left: 3613px; 
+    background-color: rgb(0, 255, 247); 
+    border-radius: 6px;
+    
+}
+
+.ne-11 {
+    width: 640px;
+    height: auto; 
+    position: absolute;
+    bottom: -30px;
+    left: 4000px; 
+    transition: transform 0.7s ease,bottom 0.7s ease;
+    z-index: -100;
+}
+
+.ne-11:hover {
+    transform: scale(1.2) translateY(-50px)
+    translateX(-50px); /* 이미지를 1.5배로 확대 */
+    opacity: 1; 
+   
+  }
+
+
+.above-box {
+    z-index: -99;
+    width: 158px;
+    height: 25px;
+    position: absolute; /* 절대 위치 지정 */
+    top: 185px; 
+    left: 3958px; 
+    background-color: rgb(0, 255, 247); 
+    border-radius: 6px;
+    
+}
+.video-3 {
+        
+    position: absolute;
+    top: 189px;
+    left: 3981px;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    font-weight: 320;
+    z-index: 100;
+    color: black;
+    white-space: nowrap;
+
+
+}
+.video-2 {
+        
+    position: absolute;
+    top: 426px;
+    left: 4346px;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    font-weight: 320;
+    z-index: 100;
+    color: black;
+    white-space: nowrap;
+
+
+}
+
+.above-box2 {
+    z-index: -99;
+    width: 200px;
+    height: 25px;
+    position: absolute; /* 절대 위치 지정 */
+    top: 422px; 
+    left: 4330px; 
+    background-color: rgb(0, 255, 247); 
+    border-radius: 6px;
+    
+}
+.ne-12 {
+    width: 400px;
+    height: auto; 
+    position: absolute;
+    bottom: -20px;
+    left: 3080px; 
+    transition: transform 0.7s ease, bottom 0.7s ease;
+    z-index: -100;
+}
+.ne-12:hover {
+    transform: scale(1.2) translateY(-50px) translateX(40px); /* 이미지를 1.5배로 확대 */
+    opacity: 1; 
+    overflow-y: scroll;
+  }
+
+
+
+  .ne-13 {
+    width: 400px;
+    height: auto; 
+    position: absolute;
+    top: 0px;
+    left: 3900px; 
+    transition: transform 0.7s ease, bottom 0.7s ease;
+    z-index: -100;
+}
+
+.ne-13:hover {
+    transform: scale(1.2) translateX(20px) ;
+    opacity: 1; 
+    overflow-y: scroll;
+  }
+
+
+
+.ne-14 {
+    width: 700px;
+    height: auto; 
+    position: absolute;
+    top: 460px;
+    left: 3440px; 
+    transition: transform 0.7s ease, bottom 0.7s ease;
+    transform: rotate(270deg);
+    z-index: -100;
+}
+
+.ne-14:hover {
+    transform: scale(1.4) translateY(-10px)translateX(30px) rotate(0deg);
+    opacity: 1; 
+    overflow-y: scroll;
+  }
+
+  .above-box5 {
+    z-index: -99;
+    width: 90px;
+    height: 25px;
+    position: absolute; /* 절대 위치 지정 */
+    top: 306px; 
+    left: 3350px; 
+    background-color: rgb(0, 255, 247); 
+    border-radius: 6px;
+    
+}
+.video-5 {
+        
+    position: absolute;
+    top: 310px;
+    left: 3363px;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    font-weight: 320;
+    z-index: 100;
+    color: black;
+    white-space: nowrap;
+
+
+}
+
+
+
+
+
+
+.clickable-image {
+    width: 1100px;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    position: absolute; /* 절대 위치 지정 */
+    top: 30px; 
+    left: 200px; 
+
+  }
+  
+
+.trail {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background:black;
+    border: 0.1px dotted black;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+

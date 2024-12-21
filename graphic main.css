@@ -1,0 +1,1188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./FreeMonospaced.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+
+    width: 276vh; 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100%; /* 전체 높이 설정 */
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+
+/* 스크롤바 전체 스타일 */
+::-webkit-scrollbar {
+    width: 12px; /* 세로 스크롤바 너비 */
+    height: 12px; /* 가로 스크롤바 높이 */
+}
+
+/* 스크롤바 트랙 (배경) 스타일 */
+::-webkit-scrollbar-track {
+    background: rgb(232, 232, 232); /* 스크롤바 배경색 */
+    border-radius: 10px;
+}
+
+/* 스크롤바 핸들 스타일 */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(232, 232, 232); /* 스크롤바 색상 */
+    
+   
+}
+
+/* 스크롤바 핸들을 누르고 있을 때 스타일 */
+::-webkit-scrollbar-thumb:active {
+    background-color: rgb(0, 255, 247); /* 스크롤바 핸들 색상 변경 */
+}
+
+
+a {
+    color: inherit; /* 부모 요소의 색상을 상속받도록 설정 */
+    text-decoration: none; /* 기본적으로 밑줄을 없앰 */
+}
+
+.main-3 {
+    position: absolute;
+    top: 52px;
+    left: 58px;
+    font-size: 11.7px;
+    word-spacing: 0px; 
+    font-weight: 300;
+}
+
+.main-5 {
+    position: absolute;
+    top: 52px;
+    left: 482px;
+    font-size: 11.7px;
+    word-spacing: 0px; 
+    font-weight: 300;
+}
+
+.main-6 {
+    position: absolute;
+    top: 52px;
+    left: 906px;
+    font-size: 11.7px;
+    word-spacing: 0px; 
+    font-weight: 300;
+}
+
+.main-7 {
+    position: absolute;
+    top: 717px;
+    left: 58px;
+    font-size: 11.7px;
+    word-spacing: 0px; 
+    font-weight: 300;
+}
+
+.main-8 {
+    position: absolute;
+    top: 717px;
+    left: 482px;
+    font-size: 11.7px;
+    word-spacing: 0px; 
+    font-weight: 300;
+}
+.main-9 {
+    position: absolute;
+    top: 717px;
+    left: 906px;
+    font-size: 11.7px;
+    word-spacing: 0px; 
+    font-weight: 300;
+}
+
+.main-10 {
+    position: absolute;
+    top: 717px;
+    left: 1328px;
+    font-size: 11.7px;
+    word-spacing: 0px; 
+    font-weight: 300;
+    text-wrap: nowrap;
+}
+
+.main-11 {
+    position: absolute;
+    top: 52px;
+    left: 1328px;
+    font-size: 11.7px;
+    word-spacing: 0px; 
+    font-weight: 300;
+    text-wrap: nowrap;
+}
+.main-12 {
+    position: absolute;
+    top: 52px;
+    left: 1779px;
+    font-size: 11.7px;
+    word-spacing: 0px; 
+    font-weight: 300;
+    text-wrap: nowrap;
+}
+
+
+.main-13 {
+    position: absolute;
+    top: 717px;
+    left: 1778px;
+    font-size: 11.7px;
+    word-spacing: 0px; 
+    font-weight: 300;
+    text-wrap: nowrap;
+}
+.ani-1{
+    height: 570px;
+    width: auto;
+    position: absolute;
+    top: -50px;
+    left: 14px;
+    z-index: -1;
+    transform: rotate(20deg);
+  
+}
+.ani-1-1{
+    height: 220px;
+    width: auto;
+    position: absolute;
+    top: 130px;
+    left: 360px;
+    z-index: -1;
+  
+}
+.ani-2{
+    z-index: 100;
+    height: 240px;
+    width: auto;
+    position: absolute;
+    top: 170px;
+    left: 446px;
+    z-index: 100;
+    transform: rotate(90deg);
+ 
+}
+.ani-2-1{
+    z-index: 100;
+    height: 240px;
+    width: auto;
+    position: absolute;
+    top: -73px;
+    left: 752px;
+    z-index: 100;
+   
+ 
+}
+
+.ani-3{
+    z-index: 100;
+    height: 220px;
+    width: auto;
+    position: absolute;
+    top: -40px;
+    left: 822px;
+    z-index: -1;
+   
+ 
+}
+
+.ani-4{
+    z-index: 10;
+    height: 424px;
+    width: auto;
+    position: absolute;
+    top: 347px;
+    left: -91px;
+    z-index: -1;
+    transform: rotate(90deg);
+}
+
+.ani-5{
+    z-index: 10;
+    height: 100px;
+    width: auto;
+    position: absolute;
+    top: 613px;
+    left: 710px;
+    z-index: 100;
+ 
+}
+
+.ani-6{
+    z-index: 10;
+    height: 400px;
+    width: auto;
+    position: absolute;
+    top: 362px;
+    left: 854px;
+    z-index: -1;
+}
+
+.ani-7{
+    z-index: 10;
+    height: 400px;
+    width: auto;
+    position: absolute;
+    top: 362px;
+    left: 1232px;
+    z-index: -1;}
+
+.ani-8{
+    z-index: 10;
+    height: 180px;
+    width: auto;
+    position: absolute;
+    top: -105px;
+    left: 1428px;
+    z-index: -1;
+}
+
+
+
+.ani-10{
+    z-index: 10;
+    height: 45px;
+    width: auto;
+    position: absolute;
+    top: 680px;
+    left: 1707px;
+    z-index: -1;
+   
+}
+
+.ani-11{
+    z-index: 10;
+    height: 205px;
+    width: auto;
+    position: absolute;
+    top: 182px;
+    left: 1557px;
+    z-index: -1;
+   
+}
+
+
+
+
+.main-1 {
+    position: absolute;
+    top: 794px;
+    left: 60px;
+    font-size: 16px;
+    word-spacing: -5px; 
+   
+}
+
+.main-2 {
+    position: absolute;
+    top: 794px;
+    left: 2189px;
+    font-size: 16px;
+    word-spacing: -5px; 
+    z-index: 100;
+    text-wrap: nowrap;
+ 
+}
+
+.main-2:hover{
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+
+
+.main {
+    position: absolute;
+    top: 744px;
+    left: 60px;
+    font-size: 15px;
+    word-spacing: -5px; 
+}
+
+.main-3-1{
+    font-weight: 350;
+    position: absolute;
+    top: 5px;
+    left: 53px;
+    font-size: 14.5px;
+    word-spacing: -1px; 
+    z-index: 100;
+
+ 
+}
+.main-3-1:hover{
+
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.main-4-1{
+    font-weight: 350;
+    position: absolute;
+    top: 5px;
+    left: 250px;
+    font-size: 14.5px;
+    word-spacing: -1px; 
+    z-index: 100;
+
+ 
+}
+.main-4-1:hover{
+
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+
+.main-5-1{
+    font-weight: 350;
+    position: absolute;
+    top: 5px;
+    left: 483px;
+    font-size: 14.5px;
+    word-spacing: -1px; 
+    z-index: 100;
+
+ 
+}
+.main-5-1:hover{
+
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+
+.main-6-1{
+    font-weight: 350;
+    position: absolute;
+    top: 5px;
+    left: 950px;
+    font-size: 14.5px;
+    word-spacing: -1px; 
+    z-index: 100;
+
+ 
+}
+.main-6-1:hover{
+
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+.main-7-1{
+    font-weight: 350;
+    position: absolute;
+    top: 5px;
+    left: 1181px;
+    font-size: 14.5px;
+    word-spacing: -1px; 
+    z-index: 100;
+
+ 
+}
+.main-7-1:hover{
+
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.main-8-1{
+    font-weight: 350;
+    position: absolute;
+    top: 5px;
+    left: 1423px;
+    font-size: 14.5px;
+    word-spacing: -1px; 
+    z-index: 100;
+    text-wrap: nowrap;
+
+ 
+}
+.main-8-1:hover{
+
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.main-9-1{
+    font-weight: 350;
+    position: absolute;
+    top: 5px;
+    left: 1693px;
+    font-size: 14.5px;
+    word-spacing: -1px; 
+    z-index: 100;
+    text-wrap: nowrap;
+
+ 
+}
+.main-9-1:hover{
+
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.main-10-1{
+    font-weight: 350;
+    position: absolute;
+    top: 5px;
+    left: 2023px;
+    font-size: 14.5px;
+    word-spacing: -1px; 
+    z-index: 100;
+    text-wrap: nowrap;
+
+ 
+}
+.main-10-1:hover{
+
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+.empty-box {
+    height: 300px;
+    width: 214px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 75px;
+    left: 60px;
+    box-sizing: border-box;
+    cursor: pointer; /* 클릭 가능하도록 커서 변경 */
+    z-index: 99; /* info-1보다 아래에 표시 */
+}
+
+/* 매체 변환*/
+.info-1 {
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 299px; 
+    width: auto; /* 너비를 100%로 설정 */
+    border: 0.1px solid black;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    z-index: 9990; /* 다른 요소보다 위에 표시 */
+}
+.info-2 {
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 32px; 
+    width: auto; /* 너비를 100%로 설정 */
+  
+    position: absolute;
+    top: 210px; 
+    left: -47px; 
+    z-index: 9990; /* 다른 요소보다 위에 표시 */
+}
+.s {
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 620px;
+    width: auto;
+    position: relative;
+    top: -150px; /* 상단 맞춤 */
+    left: -140px; /* 왼쪽 맞춤 */
+    z-index: 100;
+   
+  
+}
+
+/* 대각선 X자를 그리는 스타일 */
+.empty-box::before,
+.empty-box::after {
+    content: '';
+    position: absolute;
+    width: 367px; /* 대각선의 길이 */
+    height: 0.1px; /* 선의 두께 */
+    background-color: black; /* 대각선 색상 */
+    top: 50%; /* 세로 중심에 위치 */
+    left: 50%; /* 가로 중심에 위치 */
+    transform-origin: center; /* 중심을 기준으로 회전 */
+}
+
+/* 첫 번째 대각선 */
+.empty-box::before {
+    transform: translate(-50%, -50%) rotate(54.6deg);
+}
+
+/* 두 번째 대각선 */
+.empty-box::after {
+    transform: translate(-50%, -50%) rotate(-54.6deg);
+}
+
+/* 호버 시 투명도 변경 */
+.empty-box:hover .info-1 {
+    opacity: 1; 
+}
+
+.empty-box:hover .info-2 {
+    opacity: 1; 
+}
+
+
+.empty-box2 {
+    height: 300px;
+    width: 213px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 75px;
+    left: 485px;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 99; /* info-4보다 아래 */
+}
+.info-4 {
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 300px; 
+    width: 424px; 
+    border: 0.5px solid black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+.info-4-1 {
+        opacity: 0; /* 기본적으로 투명하게 */
+        transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+        height: 32px; 
+        width: auto; /* 너비를 100%로 설정 */
+      
+        position: absolute;
+        top: 255px; 
+        left: -60px; 
+        z-index: 9990; /* 다른 요소보다 위에 표시 */
+}
+.s-1-1 {
+    z-index: 200;
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 590px;
+    width: auto;
+    position: relative;
+    top: -612px; /* 상단 맞춤 */
+    left: -114px; /* 왼쪽 맞춤 */
+   
+  
+}
+/* 호버 시 투명도 변경 */
+.empty-box2:hover .info-4 {
+    opacity: 1; 
+}
+
+.empty-box2:hover .info-4-1 {
+    opacity: 1; 
+}
+/* 대각선 X자를 그리는 스타일 */
+.empty-box2::before,
+.empty-box2::after {
+    content: '';
+    position: absolute;
+    width: 366px;
+    height: 0.1px; /* 선의 두께 */
+    background-color: black; /* 대각선 색상 */
+    top: 50%; /* 세로 중심에 위치 */
+    left: 50%; /* 가로 중심에 위치 */
+    transform-origin: center; /* 중심을 기준으로 회전 */
+}
+
+/* 첫 번째 대각선 */
+.empty-box2::before {
+    transform: translate(-50%, -50%) rotate(54.8deg);
+}
+
+/* 두 번째 대각선 */
+.empty-box2::after {
+    transform: translate(-50%, -50%) rotate(-54.8deg);
+}
+
+
+/* 통계 인포*/
+.info-3 {
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 300.1px; 
+    width: 423px; 
+    border: 0.5px solid black;
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    z-index: 98;
+}
+
+.info-3-1 {
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 32px; 
+    width: auto; /* 너비를 100%로 설정 */
+  
+    position: absolute;
+    top: -28px; 
+    left: 200px; 
+    z-index: 9990; /* 다른 요소보다 위에 표시 */
+}
+
+.empty-box3 {
+    height: 300px;
+    width: 212px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 75px;
+    left: 909px;
+    box-sizing: border-box;
+    cursor: pointer; 
+    z-index: 99; 
+}
+.s-2 {
+    opacity: 0;
+    transition: opacity 0.7s ease;
+            
+    height: 260px;
+    width: auto;
+    position: relative;
+    top: 500px;
+    left: 60px; 
+    z-index: 100;
+}
+
+.empty-box3:hover .info-3 {
+    opacity: 1; 
+}
+
+.empty-box3:hover .info-3-1 {
+    opacity: 1; 
+}
+
+/* 대각선 X자를 그리는 스타일 */
+.empty-box3::before,
+.empty-box3::after {
+    content: '';
+    position: absolute;
+    width: 366px;
+    height: 0.1px; /* 선의 두께 */
+    background-color: black; /* 대각선 색상 */
+    top: 50%; /* 세로 중심에 위치 */
+    left: 50%; /* 가로 중심에 위치 */
+    transform-origin: center; /* 중심을 기준으로 회전 */
+}
+
+/* 첫 번째 대각선 */
+.empty-box3::before {
+    transform: translate(-50%, -50%) rotate(54.8deg);
+}
+
+/* 두 번째 대각선 */
+.empty-box3::after {
+    transform: translate(-50%, -50%) rotate(-54.8deg);
+}
+
+.empty-box4 {
+    height: 300px;
+    width: 212px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px;
+    left: 60px;
+    box-sizing: border-box;
+    cursor: pointer; /* 클릭 가능하도록 커서 변경 */
+    z-index: 99; /* info-1보다 아래에 표시 */
+}
+/* 대각선 X자를 그리는 스타일 */
+.empty-box4::before,
+.empty-box4::after {
+    content: '';
+    position: absolute;
+    width: 366px;
+    height: 0.1px; /* 선의 두께 */
+    background-color: black; /* 대각선 색상 */
+    top: 50%; /* 세로 중심에 위치 */
+    left: 50%; /* 가로 중심에 위치 */
+    transform-origin: center; /* 중심을 기준으로 회전 */
+}
+
+/* 첫 번째 대각선 */
+.empty-box4::before {
+    transform: translate(-50%, -50%) rotate(54.8deg)
+}
+
+/* 두 번째 대각선 */
+.empty-box4::after {
+    transform: translate(-50%, -50%) rotate(-54.8deg);
+}
+
+.info-5{
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 299px; 
+    width: auto; 
+    border: 0.5px solid black;
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    z-index: 98;
+}
+
+.s-3 {
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 200px;
+    width: auto;
+    position: relative;
+    top:100px; /* 상단 맞춤 */
+    left: -209px; /* 왼쪽 맞춤 */
+}
+
+
+
+/* 호버 시 투명도 변경 */
+.empty-box4:hover .info-5 {
+    opacity: 1; 
+}
+
+.empty-box4:hover .info-2-1 {
+    opacity: 1; 
+}
+
+
+.empty-box4:hover .s-3 {
+    opacity: 1; 
+}
+
+
+.empty-box5 {
+    height: 300px;
+    width: 212px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px;
+    left: 485px;
+    box-sizing: border-box;
+    cursor: pointer; /* 클릭 가능하도록 커서 변경 */
+    z-index: 90; /* info-1보다 아래에 표시 */
+}
+
+/* 대각선 X자를 그리는 스타일 */
+.empty-box5::before,
+.empty-box5::after {
+    content: '';
+    position: absolute;
+    width: 366px;
+    height: 0.1px; /* 선의 두께 */
+    background-color: black; /* 대각선 색상 */
+    top: 50%; /* 세로 중심에 위치 */
+    left: 50%; /* 가로 중심에 위치 */
+    transform-origin: center; /* 중심을 기준으로 회전 */
+}
+
+/* 첫 번째 대각선 */
+.empty-box5::before {
+    transform: translate(-50%, -50%) rotate(54.8deg);
+}
+
+/* 두 번째 대각선 */
+.empty-box5::after {
+    transform: translate(-50%, -50%) rotate(-54.8deg);
+}
+
+/* 호버 시 투명도 변경 */
+.empty-box5:hover .info-6 {
+    opacity: 1; 
+}
+
+.info-6{
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 299px; 
+    width: auto; 
+    border: 0.5px solid black;
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    z-index: 98;
+}
+
+
+
+
+.background {
+    background-image: url(); /* 배경 이미지 설정 */
+    background-size: cover; /* 이미지를 화면에 맞게 늘리기 */
+    background-position: center; /* 이미지 중앙 정렬 */
+    width: 100%; /* 전체 너비 설정 */
+    height: 100%; /* 전체 높이 설정 */
+    position: fixed; /* 고정 위치 설정 */
+    z-index: -1; /* 다른 요소들 뒤에 위치 */   
+    opacity: 1;
+    background-color: rgb(232, 232, 232);
+
+}
+
+.trail {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background:black;
+    border: 0.1px dotted black;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+
+.empty-box6 {
+    height: 300px;
+    width: 213px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px;
+    left: 908.3px;
+    box-sizing: border-box;
+    cursor: pointer; /* 클릭 가능하도록 커서 변경 */
+    z-index: 90; /* info-1보다 아래에 표시 */
+}
+
+/* 대각선 X자를 그리는 스타일 */
+.empty-box6::before,
+.empty-box6::after {
+    content: '';
+    position: absolute;
+    width: 366px;
+    height: 0.1px; /* 선의 두께 */
+    background-color: black; /* 대각선 색상 */
+    top: 50%; /* 세로 중심에 위치 */
+    left: 50%; /* 가로 중심에 위치 */
+    transform-origin: center; /* 중심을 기준으로 회전 */
+}
+
+/* 첫 번째 대각선 */
+.empty-box6::before {
+    transform: translate(-50%, -50%) rotate(54.8deg);
+}
+
+/* 두 번째 대각선 */
+.empty-box6::after {
+    transform: translate(-50%, -50%) rotate(-54.8deg);
+}
+
+.empty-box6:hover .info-7 {
+    opacity: 1; 
+}
+
+
+.info-7{
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 299px; 
+    width: auto; 
+    border: 0.5px solid black;
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    z-index: 98;
+}
+
+
+
+.empty-box7 {
+    height: 300px;
+    width: 213px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px;
+    left: 1331.6px;
+    box-sizing: border-box;
+    cursor: pointer; /* 클릭 가능하도록 커서 변경 */
+    z-index: 90; /* info-1보다 아래에 표시 */
+}
+
+/* 대각선 X자를 그리는 스타일 */
+.empty-box7::before,
+.empty-box7::after {
+    content: '';
+    position: absolute;
+    width: 366px;
+    height: 0.1px; /* 선의 두께 */
+    background-color: black; /* 대각선 색상 */
+    top: 50%; /* 세로 중심에 위치 */
+    left: 50%; /* 가로 중심에 위치 */
+    transform-origin: center; /* 중심을 기준으로 회전 */
+}
+
+/* 첫 번째 대각선 */
+.empty-box7::before {
+    transform: translate(-50%, -50%) rotate(54.8deg);
+}
+
+/* 두 번째 대각선 */
+.empty-box7::after {
+    transform: translate(-50%, -50%) rotate(-54.8deg);
+}
+
+.empty-box7:hover .info-8 {
+    opacity: 1; 
+}
+
+
+.empty-box7:hover .info-8-1 {
+    opacity: 1; 
+}
+
+
+.info-8{
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 299px; 
+    width: auto; 
+    border: 0.5px solid black;
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    z-index: 98;
+}
+
+.info-8-1{
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 349px; 
+    width: auto; 
+    position: absolute;
+    top: 43px; 
+    left: 56px;
+    z-index: 98;
+}
+
+
+.empty-box8 {
+    height: 300px;
+    width: 213px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 75px;
+    left: 1331.6px;
+    box-sizing: border-box;
+    cursor: pointer; /* 클릭 가능하도록 커서 변경 */
+    z-index: 90; /* info-1보다 아래에 표시 */
+}
+
+/* 대각선 X자를 그리는 스타일 */
+.empty-box8::before,
+.empty-box8::after {
+    content: '';
+    position: absolute;
+    width: 367px;
+    height: 0.1px; /* 선의 두께 */
+    background-color: black; /* 대각선 색상 */
+    top: 50%; /* 세로 중심에 위치 */
+    left: 50%; /* 가로 중심에 위치 */
+    transform-origin: center; /* 중심을 기준으로 회전 */
+}
+
+/* 첫 번째 대각선 */
+.empty-box8::before {
+    transform: translate(-50%, -50%) rotate(54.6deg);
+}
+
+/* 두 번째 대각선 */
+.empty-box8::after {
+    transform: translate(-50%, -50%) rotate(-54.6deg);
+}
+
+.empty-box8:hover .info-9 {
+    opacity: 1; 
+}
+
+
+.empty-box8:hover .ani-9 {
+    opacity: 1; 
+}
+
+
+
+.info-9{
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 299px; 
+    width: auto;
+    border: 0.5px solid black;
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    z-index: 98;
+}
+.ani-9{
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 189px; 
+    width: auto; 
+    position: absolute;
+    top: 23px; 
+    left: -153px;
+    z-index: 98;
+    transform: scaleX(-1);
+}
+
+
+.empty-box9 {
+    height: 300px;
+    width: 423px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 75px;
+    left: 1781.6px;
+    box-sizing: border-box;
+    cursor: pointer; /* 클릭 가능하도록 커서 변경 */
+    z-index: 90; /* info-1보다 아래에 표시 */
+}
+
+/* 대각선 X자를 그리는 스타일 */
+.empty-box9::before,
+.empty-box9::after {
+    content: '';
+    position: absolute;
+    width: 517px;
+    height: 0.1px; /* 선의 두께 */
+    background-color: black; /* 대각선 색상 */
+    top: 50%; /* 세로 중심에 위치 */
+    left: 50%; /* 가로 중심에 위치 */
+    transform-origin: center; /* 중심을 기준으로 회전 */
+}
+
+/* 첫 번째 대각선 */
+.empty-box9::before {
+    transform: translate(-50%, -50%) rotate(35.3deg);
+}
+
+/* 두 번째 대각선 */
+.empty-box9::after {
+    transform: translate(-50%, -50%) rotate(-35.3deg);
+}
+
+.empty-box9:hover .info-10 {
+    opacity: 1; 
+}
+
+.empty-box9:hover .info-10-1 {
+    opacity: 1; 
+}
+
+.info-10{
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 299px; 
+    width: auto; 
+    border: 0.5px solid black;
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    z-index: 98;
+}
+
+.info-10-1{
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 499px; 
+    width: auto; 
+    position: absolute;
+    top: -120px; 
+    left: -70px;
+    z-index: -1;
+}
+
+
+.empty-box10 {
+    height: 300px;
+    width: 423px;
+    border: 0.1px solid black;
+    position: absolute;
+    top: 410px;
+    left: 1781.6px;
+    box-sizing: border-box;
+    cursor: pointer; /* 클릭 가능하도록 커서 변경 */
+    z-index: 90; /* info-1보다 아래에 표시 */
+}
+
+/* 대각선 X자를 그리는 스타일 */
+.empty-box10::before,
+.empty-box10::after {
+    content: '';
+    position: absolute;
+    width: 517px;
+    height: 0.1px; /* 선의 두께 */
+    background-color: black; /* 대각선 색상 */
+    top: 50%; /* 세로 중심 위치 */
+    left: 50%; /* 가로 중심에 위치 */
+    transform-origin: center; /* 중심을 기준으로 회전 */
+}
+
+/* 첫 번째 대각선 */
+.empty-box10::before {
+    transform: translate(-50%, -50%) rotate(35.3deg);
+}
+
+/* 두 번째 대각선 */
+.empty-box10::after {
+    transform: translate(-50%, -50%) rotate(-35.3deg);
+}
+
+.empty-box10:hover .info-11 {
+    opacity: 1; 
+}
+
+.empty-box10:hover .info-11-1 {
+    opacity: 1; 
+}
+
+.empty-box10:hover .info-11-2 {
+    opacity: 1; 
+}
+
+
+
+.info-11{
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 299px; 
+    width: auto; 
+    border: 0.5px solid black;
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    z-index: 98;
+}
+
+.info-11-1{
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 45px; 
+    width: auto; 
+   
+    position: absolute;
+    top: 0px; 
+    left: 430px;
+    z-index: 98;
+}
+
+.info-11-2{
+    opacity: 0; /* 기본적으로 투명하게 */
+    transition: opacity 0.7s ease; /* 서서히 나타나는 효과 */
+    height: 45px; 
+    width: auto; 
+   
+    position: absolute;
+    top: 285px; 
+    left: 340px;
+    z-index: -8;
+}
+
+
+
+
+
+
+
+
+
+
