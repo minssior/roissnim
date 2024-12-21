@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typographic design</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트.png">
+    <link rel="stylesheet" href="./type main.css">
+    <link rel="stylesheet" href="./motion main.js">
+</head>
+<body>
+ 
+    <div class="background"></div>
+
+
+    <div class="main-3">[24절기 레터링]</div>
+    <div class="main-5">[한글날 의성어 레터링]</div>
+    <div class="main-6">[책 [후와후와] 레터링]</div>
+    <div class="main-7">[정류장 이름 레터링, 사랑병원 앞]</div>
+    <div class="main-8">[정류장 이름 레터링, 장산역]</div>
+    <div class="main-9">[정류장 이름 레터링, 화랑대역]</div>
+    <img src="./chunbun.png" 
+        alt="informationdesign1" 
+        class="ani-1" 
+        loading="lazy">
+    
+        <img src="./chunbun.png" 
+        alt="informationdesign1" 
+        class="ani-1-1" 
+        loading="lazy">    
+
+    <img src="./todock.png" 
+        alt="informationdesign1" 
+        class="ani-2" 
+        loading="lazy">   
+        <img src="./todock.png" 
+        alt="informationdesign1" 
+        class="ani-2-1" 
+        loading="lazy">     
+
+    <img src="./huwahuwa.png" 
+        alt="informationdesign1" 
+        class="ani-3" 
+        loading="lazy">    
+        
+    <img src="./love.png" 
+        alt="informationdesign1" 
+        class="ani-4" 
+        loading="lazy">   
+   
+        <img src="./jangsan.png" 
+        alt="informationdesign1" 
+        class="ani-5" 
+        loading="lazy">  
+
+        <img src="./hwarang.png" 
+        alt="informationdesign1" 
+        class="ani-6" 
+        loading="lazy"> 
+
+    <div class="main-1">4 </div>
+    <a href="./hi.html" target="_self">
+    <div class="main-2">/ 7</div>
+    </a>
+
+    <a href="./type-1.html" target="_self">
+    <div class="empty-box">
+      
+            <img src="./main_spring.png"
+                 alt="informationdesign1" 
+                 class="info-1" 
+                 loading="lazy">
+       
+      
+    </div>
+</a>
+    <a href="./type-2.html" target="_self">
+    <div class="empty-box2"> 
+      
+        <img src="./main_toto.png"
+          alt="informationdesign1" 
+          class="info-4" 
+          loading="lazy"> 
+
+    
+
+       
+    </div>
+</a>
+
+
+<a href="./type-3.html" target="_self">
+
+   <div class="empty-box3"> 
+    <img src="./main_huwahuwa.png"
+    alt="informationdesign1" 
+    class="info-3" 
+    loading="lazy">
+
+    <img src="./음표2.png" 
+        alt="informationdesign1" 
+        class="s-2" 
+        loading="lazy">
+    </div>
+
+</a>
+
+
+
+ <a href="./type-4.html"target="_self">
+    <div class="empty-box4"> 
+        <img src="./main_sarang.png"
+        alt="informationdesign2" 
+        class="info-5" loading="lazy">
+
+
+    </a>
+    
+        </div>
+    
+
+        <a href="./type-5.html"target="_self">
+        <div class="empty-box5">
+            
+            <img src="./main_jangsan.png"
+            alt="informationdesign2" 
+            class="info-6" loading="lazy">
+    </div>
+</a>
+
+
+
+<a href="./type-6.html"target="_self">
+        <div class="empty-box6"> 
+            
+            <img src="./main_hwarang.png"
+            alt="informationdesign2" 
+            class="info-7" loading="lazy">
+    </div>
+</a>
+ 
+
+
+
+   
+
+    <a href="https://en.wikipedia.org/wiki/Typography" target="_self">
+    <div class="main">* typographic design</div>
+    </a>
+  
+    
+    <a href="./type-1.html" target="_self">
+    <div class="main-3-1">
+        [24절기 레터링]</div>
+    </a>
+
+    <a href="./type-2.html"  target="_self">
+    <div class="main-4-1">[한글날 의성어 레터링]</div>
+</a>
+
+<a href="./type-3.html" target="_self">
+    <div class="main-5-1">[책 [후와후와] 레터링]</div>
+</a>
+
+<a href="./type-4.html" target="_self">
+     <div class="main-6-1">
+      [정류장 이름 레터링, 사랑병원 앞]</div>
+    </a>
+
+
+<a href="./type-5.html" target="_self">
+     <div class="main-7-1">
+        [정류장 이름 레터링, 장산역]</div>
+    </a>
+
+
+<a href="./type-6.html" target="_self">
+
+     <div class="main-8-1">
+        [정류장 이름 레터링, 화랑대역]</div>
+
+    </a>
+
+
+
+
+
+ 
+
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

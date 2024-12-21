@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[media translation project]</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트2.png">
+    <link rel="stylesheet" href="./info-1.css">
+</head>
+<body>
+ 
+    <div class="background"></div>
+
+    <div class="main-3-1">[media translation project]</div>
+    <div class="main-3-1-1">1</div>
+    <a href="./information.html" target="_self">
+        <div class="main-3-1-2">/4 of i ♪˙˚ʚ('◡')ɞ˚˙</div> </a>
+
+    <div class="main-3-2">
+        <p>2023</p>
+        <p>[media translation project]</p>
+        <p>indigo printing</p>
+        <p>420 * 594</p>
+    </div>
+
+    <div class="main-3-3">
+        <p>
+            <a href="https://www.youtube.com/watch?v=qybUFnY7Y8w" 
+            class="highlight-link">
+                Ok Go-This Too shall Pass</a>
+                 의 뮤직비디오 영상을 인쇄물로 시각화한 작업입니다.</p>
+
+        <p>메인으로 설정하고 집중했던 요소들은 색과 공간 그리고 골드버그 장치입니다.</p>
+  
+    </div>
+
+    <div class="main-3-4">
+
+        <p>메인으로 설정하고 집중했던 요소들은 색과 공간 그리고 골드버그 장치입니다.</p>
+        <p>대지 자체를 공간으로 설정하고 공간 구분을 위하여 X,Y축과 </p>
+        <p> 제 1 - 4분면으로 구성하여 공간에서 발생하는 변화들을 시각화하고자 했습니다. </p>
+        <p>제 2분면을 시작으로 영상에 등장하는 오브젝트는 채운 사각 픽셀, 
+            인물은 비운 사각 픽셀로 구분하고 </p>
+        <p>좌표 위에 찍어둔 위치 정보 값에  멤버들의 색 정보 값을 입혔습니다. </p>
+       
+    </div>
+
+
+
+    <div class="main-3-5">
+        <p> 선을 연결하여 영상 동안 각 색깔을 가진 인물 및 오브젝트의 이동 범위를 나타내고 </p>
+        <p>  추가적으로 
+            
+            <a href="
+            https://en.wikipedia.org/wiki/Rube_Goldberg_machine" 
+            target="_self"  class="highlight-link2">골드버그장치로 </a>진행되는 영상이라는 변수를 살려 </p>
+        <p> 트리거 오브젝트,즉 장치들이 시작되게 만드는 사물들을 영상에서 캡쳐하여 각 좌표에 삽입했습니다.</p>
+    </div>
+
+     <img src="./main_i1.png" 
+        alt="informationdesign1" 
+        class="info-1" 
+        loading="lazy">
+   
+     <img src="./main_i1.png" 
+        alt="informationdesign1" 
+        class="info-1-1" 
+        loading="lazy">
+
+     <img src="./설명용.png" 
+        alt="informationdesign1" 
+        class="info-1-2" 
+        loading="lazy">
+
+     <img src="./좌표.png" 
+        alt="informationdesign1" 
+        class="info-1-3" 
+        loading="lazy">
+
+    <img src="./오브젝트.png" 
+        alt="informationdesign1" 
+        class="info-1-4" 
+        loading="lazy">   
+                             
+    <img src="./오브젝트 2_대지 1.png" 
+        alt="informationdesign1" 
+        class="info-1-5" 
+        loading="lazy">      
+                 
+                 
+                 <div class="video-container">
+                    <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/qybUFnY7Y8w" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <p class="video-1">(っ˙˘˙)っ used video.:｡ </p>  
+                <p class="video-2">.:｡ coordinates</p> 
+                <p class="video-3">trigger object</p> 
+                <p class="video-4">color block</p> 
+                <p class="above-box"></p>  
+                <p class="above-box1"></p>   
+                <p class="above-box2"></p>   
+                <p class="above-box3"></p>     
+                        
+             
+         
+
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./FreeMonospaced.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    color: inherit; /* 부모 요소의 색상을 상속받도록 설정 */
+    text-decoration: none; /* 기본적으로 밑줄을 없앰 */
+}
+
+body, html {
+  
+    overflow-y: scroll;
+    overflow: auto; /* 스크롤 활성화 */
+
+    font-family: 'MyCustomFont', sans-serif;
+    background-color: rgb(232, 232, 232);
+}
+
+/* 스크롤바 전체 스타일 */
+::-webkit-scrollbar {
+    width: 12px; /* 세로 스크롤바 너비 */
+    height: 12px; /* 가로 스크롤바 높이 */
+}
+
+/* 스크롤바 트랙 (배경) 스타일 */
+::-webkit-scrollbar-track {
+    background: rgb(232, 232, 232); /* 스크롤바 배경색 */
+    border-radius: 10px;
+}
+
+/* 스크롤바 핸들 스타일 */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(232, 232, 232); /* 스크롤바 색상 */
+    
+   
+}
+
+/* 스크롤바 핸들을 누르고 있을 때 스타일 */
+::-webkit-scrollbar-thumb:active {
+    background-color: rgb(0, 255, 247); /* 스크롤바 핸들 색상 변경 */
+}
+
+
+.main-3-1{
+    font-weight: 900;
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    font-size: 16px;
+    word-spacing: -5px; 
+}
+.main-3-1-1{
+    font-weight: 900;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    font-size: 16px;
+    word-spacing: -5px; 
+}
+
+
+
+.main-3-1-2{
+    font-weight: 200;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 16px;
+    word-spacing: -5px; 
+}
+.main-3-1-2:hover{
+ 
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.main-3-2
+     {
+        font-size: 12.3px;
+        z-index: 100;
+        position: absolute;
+        top: 2200px; 
+        left: 30px; 
+        word-spacing: -3px; 
+    
+        
+    }
+    
+    .main-3-2 p {
+        line-height: 1.8; /* 줄 간격을 줄임 */
+    }
+    
+    .main-3-2 p:nth-child(2) {
+        text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    }
+
+    
+
+    .main-3-3
+     {
+        font-size: 12.1px;
+        z-index: 100;
+        position: absolute;
+        top: 2736px; 
+        left: 30px; 
+        word-spacing: -3px; 
+        line-height: 1.5;
+        letter-spacing: 0.4px;
+        font-weight: 320;
+        
+    }
+
+    .main-3-4
+    {
+       font-size: 12.1px;
+       z-index: 100;
+       position: absolute;
+       top: 2815px; 
+       left: 30px; 
+       word-spacing: -3px; 
+       line-height: 1.5;
+       letter-spacing: 0.4px;
+       font-weight: 320;
+       
+   }
+
+
+   .main-3-5
+   {
+      font-size: 12.1px;
+      z-index: 100;
+      position: absolute;
+      top: 2945px; 
+      left: 30px; 
+      word-spacing: -3px; 
+      line-height: 1.5;
+      letter-spacing: 0.4px;
+      font-weight: 320;
+      
+  }
+
+
+    .highlight-link {
+        font-weight: bold; /* 두께를 두껍게 설정 */
+        text-decoration: none; /* 링크의 밑줄 제거 */
+        color: inherit; /* 텍스트 색상 상속 */
+    }
+
+    .highlight-link2 {
+       
+        text-decoration: none; /* 링크의 밑줄 제거 */
+        color: inherit; /* 텍스트 색상 상속 */
+    }
+
+   
+    .info-1 {
+        
+        width: 100%; /* 부모 요소에 맞게 설정 */
+        height: auto; /* 이미지 비율 유지 */
+        object-fit: cover;
+        margin-top: 30px; /* 상단에서 5px 떨어진 위치 */
+    
+    }
+
+    .info-1-1 {
+        height: 800px; 
+        width: auto;
+        position: absolute;
+        top: 2200px;
+        right: 0px;
+        z-index: 100; /* 다른 요소보다 위에 표시 */
+        
+    
+    }
+    .info-1-2 {
+        height: 1020px; 
+        width: auto;
+        position: absolute;
+        top: 2120px;
+        left: 130px;
+        z-index: 99; /* 다른 요소보다 위에 표시 */
+        filter: blur(9px); /* 기본 상태에서 흐리게 설정 */
+        transition: filter 0.6s ease; /* 효과의 부드러운 전환 */
+        transform: rotate(90deg);
+    
+    }
+
+    .info-1-2:hover {
+        filter: blur(0); /* 마우스를 올렸을 때 선명해짐 */
+    }
+
+    .info-1-3 {
+        height: 670px; 
+        width: auto;
+        position: absolute;
+        top: 3150px;
+        left: 20px;
+        z-index: 99; /* 다른 요소보다 위에 표시 */
+        transition: transform 0.7s ease;
+       
+    
+    }
+    .info-1-3:hover {
+        transform: scale(1.2) 
+        translateX(40px)
+        translateY(-55px); /* 이미지를 1.5배로 확대 */
+      }
+
+    .info-1-4 {
+        height: 200px; 
+        width: auto;
+        position: absolute;
+        top: 3072px;
+        left: 920px;
+        z-index: 99; /* 다른 요소보다 위에 표시 */
+        transition: transform 0.7s ease;
+       
+    
+    }
+
+    .info-1-4:hover {
+        transform: scale(1.3) translateX(-80px); /* 이미지를 1.5배로 확대 */
+      }
+
+    .info-1-5 {
+        height: 250px; 
+        width: auto;
+        position: absolute;
+        top: 3312px;
+        left: 689px;
+        z-index: 99; /* 다른 요소보다 위에 표시 */
+       
+        transition: transform 1s ease;
+       
+    
+    }
+    .info-1-5:hover {
+        transform: scale(1.6); /* 이미지를 1.5배로 확대 */
+      }
+
+    
+    .video-container {
+        position: absolute;
+        top: 3600px;
+        left: 1090px;
+    }
+
+    .video-container2 {
+        position: absolute;
+        top: 3600px;
+        left: 690px;
+    }
+
+    .above-bos {
+        z-index: -100;
+        width: 104px;
+        height: 23px;
+        position: absolute; /* 절대 위치 지정 */
+        top: 2243px; 
+        left: 23px; 
+        background-color: rgb(246, 255, 0); 
+        border-radius: 6px;
+        
+    }   
+
+    .above-box {
+        z-index: -100;
+        width: 230px;
+        height: 25px;
+        position: absolute; /* 절대 위치 지정 */
+        top: 3547px; 
+        left: 1260px; 
+        background-color: rgb(0, 255, 247); 
+        border-radius: 6px;
+        
+    }
+
+    .above-box1 {
+        z-index: 100;
+        width: 150px;
+        height: 25px;
+        position: absolute; /* 절대 위치 지정 */
+        top: 3099px; 
+        left: 20px; 
+        background-color: rgb(0, 255, 247); 
+        border-radius: 6px;
+        
+    }
+    
+    .above-box2 {
+        z-index: 100;
+        width: 140px;
+        height: 25px;
+        position: absolute; /* 절대 위치 지정 */
+        top: 3020px; 
+        right: 10px; 
+        background-color: rgb(0, 255, 247); 
+        border-radius: 6px;
+        
+    }
+
+    .above-box3 {
+        z-index: 100;
+        width: 120px;
+        height: 25px;
+        position: absolute; /* 절대 위치 지정 */
+        top: 3257px; 
+        left: 690px; 
+        background-color: rgb(0, 255, 247); 
+        border-radius: 6px;
+        
+    }
+    
+    
+    .video-1 {
+        
+        position: absolute;
+        top: 3550px;
+        left: 1273px;
+        font-size: 13px;
+        letter-spacing: 0.4px;
+        font-weight: 320;
+        z-index: 100;
+        color: black;
+        text-wrap: nowrap;
+
+    
+    }
+
+    .video-2 {
+        
+        position: absolute;
+        top: 3100px;
+        left: 32px;
+        font-size: 13px;
+        letter-spacing: 0.4px;
+        font-weight: 320;
+        z-index: 200;
+        color: black;
+
+    
+    }
+
+    .video-3 {
+        
+        position: absolute;
+        top: 3024px;
+        right: 20px; 
+        font-size: 13px;
+        letter-spacing: 0.4px;
+        font-weight: 320;
+        z-index: 200;
+        color: black;
+
+    
+    }
+
+    .video-4 {
+        
+        position: absolute;
+        top: 3262px;
+        left: 713px; 
+        font-size: 13px;
+        letter-spacing: 0.4px;
+        font-weight: 320;
+        z-index: 200;
+        color: black;
+
+    
+    }
+
+
+.trail {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background:black;
+    border: 0.1px dotted black;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+

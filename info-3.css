@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./FreeMonospaced.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    color: inherit; /* 부모 요소의 색상을 상속받도록 설정 */
+    text-decoration: none; /* 기본적으로 밑줄을 없앰 */
+}
+
+body, html {
+    overflow-y: scroll;
+    overflow: auto; /* 스크롤 활성화 */
+    
+    font-family: 'MyCustomFont', sans-serif;
+    background-color: rgb(232, 232, 232);
+}
+
+/* 스크롤바 전체 스타일 */
+::-webkit-scrollbar {
+    width: 12px; /* 세로 스크롤바 너비 */
+    height: 12px; /* 가로 스크롤바 높이 */
+}
+
+/* 스크롤바 트랙 (배경) 스타일 */
+::-webkit-scrollbar-track {
+    background: rgb(232, 232, 232); /* 스크롤바 배경색 */
+    border-radius: 10px;
+}
+
+/* 스크롤바 핸들 스타일 */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(232, 232, 232); /* 스크롤바 색상 */
+    
+   
+}
+
+/* 스크롤바 핸들을 누르고 있을 때 스타일 */
+::-webkit-scrollbar-thumb:active {
+    background-color: rgb(0, 255, 247); /* 스크롤바 핸들 색상 변경 */
+}
+
+
+.main-3-1{
+    font-weight: 900;
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    font-size: 16px;
+    word-spacing: -5px; 
+}
+.main-3-1-1{
+    font-weight: 900;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    font-size: 16px;
+    word-spacing: -5px; 
+}
+
+
+
+.main-3-1-2{
+    font-weight: 900;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 16px;
+    word-spacing: -5px; 
+}
+.main-3-1-2:hover{
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+
+   
+
+    .highlight-link {
+        font-weight: bold; /* 두께를 두껍게 설정 */
+        text-decoration: none; /* 링크의 밑줄 제거 */
+        color: inherit; /* 텍스트 색상 상속 */
+    }
+
+    .highlight-link2 {
+       
+        text-decoration: none; /* 링크의 밑줄 제거 */
+        color: inherit; /* 텍스트 색상 상속 */
+    }
+
+   
+    .info-1 {
+        
+        width: 100%; /* 부모 요소에 맞게 설정 */
+        height: auto; /* 이미지 비율 유지 */
+        object-fit: cover;
+        margin-top: 30px; /* 상단에서 5px 떨어진 위치 */
+    
+    }
+
+    .info-1-1 {
+        height: 800px; 
+        width: auto;
+        position: absolute; 
+        top: 4300px; 
+        left: 615px;
+      
+        z-index: 100; 
+    }
+
+    .info-1-2 {
+        height: 800px; 
+        width: auto;
+        position: absolute;
+        top: 4200px;
+        left: -60px;
+        z-index: 99; /* 다른 요소보다 위에 표시 */
+        filter: blur(5px); /* 기본 상태에서 흐리게 설정 */
+        transition: filter 0.3s ease; /* 효과의 부드러운 전환 */
+    
+    }
+
+    .info-1-2:hover {
+        filter: blur(0); /* 마우스를 올렸을 때 선명해짐 */
+    }
+
+    .main-3-2
+     {
+        font-size: 12.3px;
+        z-index: 100;
+        position: absolute;
+        top: 4300px; 
+        left: 30px; 
+        word-spacing: -3px; 
+        
+    }
+    
+    .main-3-2 p {
+        line-height: 1.8; /* 줄 간격을 줄임 */
+    }
+    
+    .main-3-2 p:nth-child(2) {
+        text-indent: -6px; /* 두 번째 p 요소에만 들여쓰기 20px 적용 */
+    }
+
+
+    .above-box {
+        z-index: -100;
+        width: 104px;
+        height: 23px;
+        position: absolute; /* 절대 위치 지정 */
+        top: 4344px; 
+        left: 23px; 
+        background-color: rgb(0, 255, 76); 
+        border-radius: 6px;
+        
+    }   
+
+
+    .main-3-3
+    {
+       font-size: 12.1px;
+       z-index: 100;
+       position: absolute;
+       top: 4876px; 
+       right: 74px; 
+       word-spacing: -3px; 
+       line-height: 1.5;
+       letter-spacing: 0.4px;
+       font-weight: 320;
+       
+   }
+
+   .main-3-4
+   {
+      font-size: 12.1px;
+      z-index: 100;
+      position: absolute;
+      top: 4935px; 
+      right: 100px; 
+      word-spacing: -3px; 
+      line-height: 1.5;
+      letter-spacing: 0.4px;
+      font-weight: 320;
+      
+  }
+
+
+  .main-3-5
+  {
+     font-size: 12.1px;
+     z-index: 100;
+     position: absolute;
+     top: 5045px; 
+     right: 100px; 
+     word-spacing: -3px; 
+     line-height: 1.5;
+     letter-spacing: 0.4px;
+     font-weight: 320;
+     
+ }
+
+ .custom-iframe {
+    width: 500px; /* 가로 크기 */
+    height: 200px; /* 세로 크기 */
+    border: 2px solid black; /* 테두리 설정 */
+ 
+
+    position: absolute; 
+    top: 5740px;
+    right: 20px ;
+    overflow: hidden; /* 내부 스크롤 숨김 */
+}
+
+
+.i3-1 {
+    height: 600px; 
+    width: auto;
+    position: absolute;
+    top: 5160px;
+    left: 20px;
+    z-index: 99; /* 다른 요소보다 위에 표시 */
+    transition: transform 0.7s ease;
+   
+}
+
+.i3-1:hover {
+    transform: scale(1.2); /* 이미지를 1.5배로 확대 */
+      opacity: 1; 
+  }
+  
+
+.i3-2:hover {
+    transform: scale(1.2); /* 이미지를 1.5배로 확대 */
+    opacity: 1; 
+  }
+.i3-3:hover {
+    transform: scale(1.2); /* 이미지를 1.5배로 확대 */
+    opacity: 1; 
+  }
+
+.i3-4:hover {
+    transform: scale(1.2); /* 이미지를 1.5배로 확대 */
+    opacity: 1; 
+  }
+
+.i3-2 {
+    height: 220px; 
+    width: auto;
+    position: absolute;
+    top: 5750px;
+    left: 20px;
+    z-index: 99; /* 다른 요소보다 위에 표시 */
+    transition: transform 0.7s ease;
+   
+}
+
+.i3-3 {
+    height: 720px; 
+    width: auto;
+    position: absolute;
+    top: 5000px;
+    left: 380px;
+    z-index: 99; /* 다른 요소보다 위에 표시 */
+    transition: transform 0.7s ease;
+   
+}
+
+
+.i3-4 {
+    height: 460px; 
+    width: auto;
+    position: absolute;
+    top: 5310px;
+    left: 930px;
+    z-index: 99; /* 다른 요소보다 위에 표시 */
+    transition: transform 0.7s ease;
+   
+}
+
+.above-box1 {
+    z-index: -100;
+    width: 200px;
+    height: 23px;
+    position: absolute; /* 절대 위치 지정 */
+    top: 5536px; 
+    left: 670px; 
+    background-color: rgb(0, 255, 247);
+    border-radius: 6px;
+    
+}   
+
+.above-box2 {
+    z-index: -100;
+    width: 162px;
+    height: 23px;
+    position: absolute; /* 절대 위치 지정 */
+    top: 5920px; 
+    left: 774px; 
+    background-color: rgb(0, 255, 247);
+    border-radius: 6px;
+    
+}   
+.video-1 {
+        
+    position: absolute;
+    top: 5539px;
+    left: 685px;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    font-weight: 320;
+    z-index: 100;
+    color: black;
+
+
+}
+
+.video-2 {
+        
+    position: absolute;
+    top: 5921px;
+    left: 790px;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    font-weight: 320;
+    z-index: 100;
+    color: black;
+
+
+}
+
+.i3 {
+    opacity: 0.3; /* 기본적으로 흐린 상태 */
+    transition: opacity 0.5s ease; /* 부드러운 전환 효과 */
+    transition: transform 0.7s ease;
+}
+
+.video-1:hover + iframe + .i3 {
+    opacity: 1; /* video-1에 마우스를 올리면 이미지 진하게 */
+}
+
+.video-1:hover ~ .i3 {
+    opacity: 1; /* 모든 이미지를 진하게 */
+}
+
+.trail {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background:black;
+    border: 0.1px dotted black;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+

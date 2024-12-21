@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Animal Crossing virtual pop-up store promotion video]</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트2.png">
+    <link rel="stylesheet" href="./motion-1.css">
+    <link rel="stylesheet" href="./motion-1.js">
+</head>
+<body>
+ 
+    <div class="background"></div>
+
+    <div class="main-3-1">[Animal Crossing virtual pop-up store promotion video]</div>
+    <div class="main-3-1-1">1</div>
+    <a href="./motion main.html" target="_self">
+        <div class="main-3-1-2">/3 of m ♪҉*\( ・ω・ )/♪*҉</div> </a>
+
+        <video controls width="600" class="vtest">
+            <source src="./2022111512 김민서 모션그래픽 최종영상.mp4" type="video/mp4">
+            <source src="sample.ogg" type="video/ogg">
+            브라우저가 이 비디오를 지원하지 않습니다.
+          </video>
+          
+        
+        <video controls width="600" class="vtest2">
+            <source src="./2022111512 김민서 모션그래픽 최종영상.mp4" type="video/mp4">
+            <source src="sample.ogg" type="video/ogg">
+            브라우저가 이 비디오를 지원하지 않습니다.
+          </video>  
+
+          <img class="floating-image" src="./잎.png" alt="Floating Image">
+
+          <img class="floating-image4" src="./잎.png" alt="Floating Image">
+
+          <img class="floating-image2" src="./오카네.png" alt="Floating Image">
+
+          <img class="floating-image3" src="./너구리.png" alt="Floating Image">
+
+          <img class="floating-image5" src="./너구리.png" alt="Floating Image">
+
+          <div class="bgm">play me. . ♪ᖰ(ᵕ◡ᵕ)ᖳ♪*҉</div>
+       
+
+          <img class="new-image" src="./kk.png" alt="New Image" onclick="playAudio()">
+  
+          <!-- 오디오 요소 -->
+          <audio id="background-audio" src="./모동숲 라이브 95 모두 모여봐요.mp3"></audio>
+
+          <div class="main-3-2">
+            <p>2023</p>
+            <p>[Animal Crossing virtual pop-up store promotion video]</p>
+            <p>video, 13s</p>
+            <p>2480 * 3508 (px)</p>
+        </div>
+
+        <img src="./동숲 편지지.png" alt="edit1" class="letter">
+
+
+        <div class="main-3-3">
+            <p>
+                가상의 팝업스토어를 기획하고, 이를 홍보하기 위한
+            </p>
+            <p>
+                프로모션 비디오를 제작한 프로젝트입니다.
+            </p>
+         </div>
+
+
+         <div class="main-3-4">
+            <p>닌텐도 게임 ‘모여봐요 동물의 숲’의 가상 팝업스토어 내 팝업 프로그램, 일정, 그리고 장소를 기획했습니다.</p>
+            <p>‘모여봐요 동물의 숲’을 플레이하는 유저들을 초대하는 컨셉으로, </p>
+            <p>‘모여봐요 섬주민 대표 축제’라는 이름을 붙였으며</p>
+             <p>주민 대표에게 초대장을 보내고 이를 열어 내용을 확인하는 스토리로 구성했습니다.</p>
+        </div>
+
+        <div class="main-3-4-1">
+            <p>해당 내용을 무빙 포스터로 확인할 수 있도록 레이아웃하고  </p>
+            <p>모션을 추가했습니다. </p>
+ 
+        </div>
+
+
+        <img src="./잎.png" alt="이미지" class="rotating-image">
+        <img src="./오카네.png" alt="이미지" class="rotating-image2">
+        <img src="./너구리.png" alt="이미지" class="rotating-image3">
+
+        <img src="./rndnfma.png" alt="이미지" class="cloud">
+        <img src="./rndnfma.png" alt="이미지" class="cloud2">
+
+        <img src="./푠지지.png" alt="이미지" class="cloud3">
+        <img src="./동숲 타이틀.png" alt="이미지" class="cloud4">
+        <img src="./동숲 편지지.png" alt="이미지" class="cloud5">
+
+
+        <p class="video-1"> 3d graphic elements </p>  
+        <p class="video-2">envelope graphic</p> 
+        <p class="video-3">letter image</p> 
+        <p class="video-4">title graphic</p> 
+        <p class="video-5"> (੭ ˊ ᵕˋ)੭ used music ♪ </p>  
+        <p class="above-box"></p>  
+        <p class="above-box2"></p> 
+        <p class="above-box3"></p> 
+        <p class="above-box4"></p>
+        <p class="above-box5"></p>
+
+        <audio controls>
+            <source src="./모여봐요 동물의 숲.mp3" type="audio/mp3">
+            브라우저가 오디오 태그를 지원하지 않습니다.
+        </audio>
+
+
+
+     
+   
+    
+           
+
+  <script>
+    function playAudio() {
+      const audio = document.getElementById('background-audio');
+      if (audio.paused) {
+        audio.play();  // 재생
+      } else {
+        audio.pause(); // 일시 정지
+        audio.currentTime = 0; // 처음부터 재생
+      }
+    }
+  </script>
+
+
+    
+
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

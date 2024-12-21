@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editorial design</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트.png">
+    <link rel="stylesheet" href="./edit main.css">
+    <link rel="stylesheet" href="./edit main.js">
+</head>
+<body>
+ 
+    <div class="background"></div>
+    <div class="chae"></div>
+
+
+
+    <div class="main-3">[*사랑을 볼 수 있게 해야지! 를 위한 책자 작업]</div>
+    <div class="main-5">[아카이브! 길카이브! 아카이브!]</div>
+    <div class="main-6">[lookbook for TwiTwiClub]</div>
+   
+    <img src="./스캔.png" 
+        alt="informationdesign1" 
+        class="ani-1" 
+        loading="lazy">
+   
+
+    <img src="./냥냥.png" 
+        alt="informationdesign1" 
+        class="ani-3" 
+        loading="lazy">    
+        
+    <img src="./브랜딩/튀튀클럽.png" 
+        alt="informationdesign1" 
+        class="ani-4" 
+        loading="lazy">   
+   
+    <div class="main-1">3 </div>
+    <a href="./hi.html" target="_self">
+    <div class="main-2">/ 7</div>
+    </a>
+
+    <div class="empty-box">
+        <a href="./edit-1.html" target="_self">
+            <img src="./main_edit1.png" 
+                 alt="informationdesign1" 
+                 class="info-1" 
+                 loading="lazy">
+        </a>
+    
+        <img src="./의쌰 요소들-02.png" 
+             alt="informationdesign1" 
+             class="s" 
+             loading="lazy">
+    
+        <img src="./의쌰 요소들-01.png" 
+             alt="informationdesign1" 
+             class="s-4" 
+             loading="lazy">
+    </div> 
+
+
+    
+    <div class="empty-box2"> 
+        <a href="./edit-2.html" target="_self">
+        <img src="./main_edit2.png" 
+          alt="informationdesign1" 
+          class="info-4" 
+          loading="lazy"> 
+        </a>
+      <img src="./아닌지~_.png" 
+    alt="informationdesign1" 
+    class="s-1" 
+    loading="lazy">    
+    </div>
+
+
+   <div class="empty-box3"> 
+    <a href="./edit-3.html" target="_self">
+    <img src="./br/edit.png" 
+    alt="informationdesign1" 
+    class="info-3" 
+    loading="lazy">
+  </a>
+    <img src="./br/dpd.png" 
+        alt="informationdesign1" 
+        class="s-2" 
+        loading="lazy">
+        
+  <img src="./br/xhRL.png" 
+        alt="informationdesign1" 
+        class="s-3" 
+        loading="lazy">
+    </div>
+   
+   
+
+    <a href="https://de.wikipedia.org/wiki/Editorial_Design" target="_self">
+    <div class="main">* editorial design</div>
+    </a>
+  
+    
+    <a href="./edit-1.html">
+    <div class="main-3-1">
+        [*사랑을 볼 수 있게 해야지! 를 위한 책자 작업]</div>
+    </a>
+
+    <a href="./edit-2.html">
+    <div class="main-4-1">[아카이브! 길카이브! 아카이브!]</div>
+    </a>
+    
+    <a href="./edit-3.html">
+    <div class="main-5-1">[lookbook for TwiTwiClub]</div>
+    </a>
+
+
+
+
+ 
+
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

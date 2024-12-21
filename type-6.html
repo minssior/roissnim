@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[정류장 이름 레터링, 화랑대역]</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트2.png">
+    <link rel="stylesheet" href="./type-6.css">
+    <link rel="stylesheet" href="./type-2.js">
+</head>
+<body>
+ 
+    <div class="background"></div>
+
+    <div class="main-3-1">[정류장 이름 레터링, 화랑대역]</div>
+    <div class="main-3-1-1">6</div>
+    <a href="./type main.html" target="_self">
+        <div class="main-3-1-2">/6 of t 𐔌՞ᱹ ﹼ ̫ ᱹ՞𐦯</div> </a>
+
+    <div class="main-3-2">
+        <p>2024</p>
+        <p>[정류장 이름 레터링, 화랑대역]</p>
+    </div>
+
+
+
+    <div class="main-3-3">
+        <p>지금까지 살았던 지역의 정류장 역들을 레터링한 프로젝트입니다. </p>
+  
+  
+    </div>
+
+    <div class="main-3-4">
+
+        <p> </p>
+        <p>‘화랑대역’ 정류장은 </p>
+        <p> 앞으로의 추억이 쌓여갈 역이라는 의도를 담아 </p>
+        <p> 얇은 선들로 타입을 디자인했습니다.</p>
+        
+    </div>
+
+    <div class="main-3-5">
+
+        <p>서울의 지하철을 타는 것조차 설레고</p>
+        <p>약간은 떨렸던 감정을 담아 레터링했습니다.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <img src="./main_hwarang.png" 
+    alt="informationdesign1" 
+    class="info-1" 
+    loading="lazy">
+
+  
+
+
+
+    <div class="container"></div>
+
+
+     <img src="./main_hwarang.png" 
+        alt="informationdesign1" 
+        class="info-1-1" 
+        loading="lazy">
+
+
+            <img src="./hwarang detail.png" 
+                 alt="informationdesign1" 
+                 class="info-1-2" 
+                 loading="lazy">
+        
+            <img src="./why.png" 
+                 alt="informationdesign1" 
+                 class="de-1" 
+                 loading="lazy">
+        
+            <img src="./why.png" 
+                 alt="informationdesign1" 
+                 class="de-2" 
+                 loading="lazy">
+
+
+           
+   
+               
+   
+                
+                <p class="video-1"> shape of subway line</p>  
+     
+                <p class="video-4"> shape of subway line</p> 
+                <p class="above-box"></p>  
+
+                <p class="above-box3"></p>     
+                        
+             
+           
+
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

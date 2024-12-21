@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>information design</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트.png">
+    <link rel="stylesheet" href="./information.css">
+    <link rel="stylesheet" href="information.js">
+</head>
+<body>
+ 
+    <div class="background"></div>
+
+
+    <a href="https://en.wikipedia.org/wiki/Information_design" target="_self">
+    <div class="main">* information design</div>
+    </a>
+    <div class="main-1">1 </div>
+    <a href="./hi.html" target="_self">
+    <div class="main-2">/ 7</div>
+    </a>
+    <a href="./info-1.html" target="_self">
+    <div class="main-3">[media translation project]</div>
+    </a>
+    
+    <div class="main-4">[everything about the lotto]</div>
+    <div class="main-5">[statistical translation project]</div>
+    <div class="main-6">[reproduction of newspapers project]</div>
+    <a href="./info-1.html" target="_self">
+    <div class="main-3-1">[media translation project]</div>
+    </a>
+
+    <a href="./info-2.html" target="_self">
+    <div class="main-4-1">[everything about the lotto]</div>
+    </a>
+
+    <a href="./info-3.html" target="_self">
+    <div class="main-5-1">[statistical translation project]</div>
+</a>
+    <a href="./info-4.html" target="_self">
+    <div class="main-6-1">[reproduction of newspapers project]</div>
+</a>
+    <div class="empty-box">
+        <a href="./info-1.html" target="_self">
+            <img src="./main_i1.png" 
+                 alt="informationdesign1" 
+                 class="info-1" 
+                 loading="lazy">
+        </a>
+        <img src="./하아...png" 
+        alt="informationdesign1" 
+        class="s" 
+        loading="lazy">
+    </div>
+
+    
+    <a href="./info-4.html" target="_self">
+    <div class="empty-box2"> 
+        <img src="./main_i4.png" 
+          alt="informationdesign1" 
+          class="info-4" 
+          loading="lazy"> 
+        </a>
+        <img src="./요소 수정2.png" 
+        alt="informationdesign1" 
+        class="s-1" 
+        loading="lazy">
+    </div>
+
+   <a href="./info-3.html" target="_self">
+   <div class="empty-box3"> 
+    <img src="./main_i3.png"
+    alt="informationdesign1" 
+    class="info-3" 
+    loading="lazy">
+</a>
+    <img src="./요소 수정3.png" 
+        alt="informationdesign1" 
+        class="s-2" 
+        loading="lazy">
+    </div>
+   
+
+
+    <a href="./info-2.html" target="_self">
+    <div class="empty-box4"> 
+        <img src="./main_i2.png" 
+        alt="informationdesign2" 
+        class="info-2" loading="lazy">
+
+        <img src="./main_i2-1.png" 
+        alt="informationdesign3" 
+        class="info-2-1" loading="lazy">
+    </a>
+    
+        <img src="./요소 수정4.png" 
+            alt="informationdesign1" 
+            class="s-3" 
+            loading="lazy">
+
+        </div>
+    
+   
+    <div class="empty-box5">  </div>
+ 
+
+ 
+
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[reproduction of newspapers project]</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트2.png">
+    <link rel="stylesheet" href="./info-4.css">
+    <link rel="stylesheet" href="./info-4.js">
+</head>
+<body>
+ 
+    <div class="background"></div>
+
+    <div class="main-3-1">[reproduction of newspapers project]</div>
+    <div class="main-3-1-1">4</div>
+    <a href="./information.html" taㄴrget="_self">
+        <div class="main-3-1-2">/4 of i ♪˙˚ʚ('◡')ɞ˚˙</div> </a>
+
+<!--
+        <iframe 
+    src="./[reproduction of newspapers project (⑉´•˶˶̫˶ •`⑉)].pdf" 
+    class="pdf-frame">
+</iframe>
+
+-->
+        <img src="./Comp 1_7.gif" 
+        alt="" 
+        class="ne-7" 
+        loading="lazy">
+
+        <img src="./신문 상세요소 2-02.png" 
+        alt="" 
+        class="ne-8" 
+        loading="lazy">
+          
+        <img src="./신문 상세요소 2_대지 1.png" 
+        alt="" 
+        class="ne-9" 
+        loading="lazy">
+          
+
+
+        <div class="main-3-2">
+            <p>2024</p>
+            <p>[reproduction of newspapers project]</p>
+            <p>printed on newsprint paper</p>
+            <p>420 * 594 x 6</p>
+        </div>
+          
+        <p class="above-box4"></p>   
+        <p class="above-box"></p>   
+        <p class="above-box2"></p>   
+        <p class="above-box3"></p>  
+        <p class="above-box5"></p> 
+        
+        <p class="video-1"> media company color code </p>  
+        <p class="video-2"> page advertisement </p>  
+        <p class="video-3"> additional information </p>  
+        <p class="video-4"> media company list </p>  
+        <p class="video-5"> keywords </p>  
+
+        <div class="main-3-3">
+            <p>
+                신문의 면을 새로운 형태의 정보 디자인으로 재해석한 프로젝트입니다.
+            </p>
+    
+      
+        </div>
+    
+        <div class="main-3-4">
+    
+            <p>사진 없이 텍스트와 그래프로만 신문의 정보를 전달하는 것을 목표로 했으며</p>
+            <p>총 6곳의 언론사에 각각 컬러 코드를 부여했습니다. </p>
+            <p>정치, 사회, 스포츠, 문화면의 기사 제목, 부제목, 본문의 길이를 측정하여 블록화했고, </p>
+            <p>키워드를 이를 통해 각 언론사가 동일한 주제에서 </p>
+            <p>어떤 면적으로, 어떻게 반응하고 있는지를 시각화했습니다. </p>
+           
+        </div>
+    
+    
+        <div class="main-3-4-1">
+            <p>정치면은 현 정부에 대한 긍정과 부정을, 사회·스포츠면은 헤드라인을, </p>
+            <p>문화면은 메인 헤드라인과 서브 헤드라인을 비교하여  </p>
+            <p>볼 수 있도록 페이지를 구성했습니다. </p> 
+
+           
+        </div>
+    
+        <img src="./신문 상세 요소1.png" 
+        alt="" 
+        class="ne-10" 
+        loading="lazy">
+
+     
+
+        <img src="./신문들/무제-43-03.png" 
+        alt="" 
+        class="ne-11" 
+        loading="lazy">
+
+        <img src="./신문들/무제-43-06.png" 
+        alt="" 
+        class="ne-12" 
+        loading="lazy">
+
+
+        <img src="./신문들/무제-43-04.png" 
+        alt="" 
+        class="ne-13" 
+        loading="lazy">
+
+        <img src="./신문들/수정요소.png" 
+        alt="" 
+        class="ne-14" 
+        loading="lazy">
+    
+           
+        </div>
+        <div class="main-3-5">
+
+            <p >신문의 판형 크기와 여백은 원본 그대로 가져와 사용했으며</p>
+            <div class="hover-popup">
+                <img class="popup-image"
+                 src="./하잌ㅋ.png" alt="Hover Image" />
+            </div>
+        
+            
+            <p>각 지면마다 기사들이 가진 정보값을 분석했습니다.</p>
+            <p>또한 기사의 실제 위치와 삽입된 광고도 확인할 수 있도록 제작했습니다.</p>
+           
+        </div>
+
+ 
+            <img id="image" 
+                 src="./신문들/신문1.png" 
+                 alt="image" 
+                 class="clickable-image" 
+                 onmouseover="showAlert()"/>
+        
+            <script>
+                // 이미지 배열
+                const images = [
+                    './신문들/신문1.png',
+                    './신문들/신문2.png',
+                    './신문들/신문3.png',
+                    './신문들/신문4.png',
+                    './신문들/신문5.png',
+                   './신문들/신문6.png'
+                ];
+        
+                // 현재 이미지 인덱스
+                let currentIndex = 0;
+        
+                // 이미지 요소
+                const imageElement = document.getElementById('image');
+        
+                // DOM이 완전히 로드된 후에 이벤트 리스너 추가
+                window.addEventListener('DOMContentLoaded', () => {
+                    // 이미지 클릭 이벤트
+                    imageElement.addEventListener('click', () => {
+                        // 다음 이미지로 인덱스를 증가시킴
+                        currentIndex = (currentIndex + 1) % images.length;
+                        
+                        // 새로운 이미지 경로로 변경
+                        imageElement.src = images[currentIndex];
+                    });
+                });
+            </script>
+
+
+<script>
+    function showAlert() {
+      alert("작업물을 클릭해보세요! .｡.:*ෆվ'ᴗ' ի･:* .♬");
+    }
+  </script>
+        </body>
+        </html>
+        
+          
+          
+
+
+    
+
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

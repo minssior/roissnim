@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minssior</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트.png">
+    <link rel="stylesheet" href="./roissnim.css">
+
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="first">  
+        <p> 김민서는 서울여자대학교에서 시각디자인을 전공하고 있습니다. </p> 
+        <p> 여러 분야의 디자인을 공부하고 경험한 것을 발판 삼아 </p>
+        <p> 그래픽디자인을 기반으로 편집디자인, 서체디자인 등을 작업합니다.</p>  
+        <p> 타이포그래피 레이아웃과 사진을 활용한 레이아웃 디자인을 즐겨하며 </p>  
+        <p> 입체적인 것을 재료 삼아 여러 그래픽적 실험을 통해 디자인하는 것 또한 선호합니다. </p>  
+        <p> 좋아하는 것을 기록하고 나만의 방식으로 기억하는 방법 중 </p>  
+        <p> 하나를 디자인으로 삼아 작업 방향을 설정하고 있습니다. </p>  
+        <p> 시각적인 형태들이 독립되어 보이는 것이 아닌 작은 것이라도 서로 연결되어 있는 </p>  
+        <p> 흐름을 보여줄 수 있는 디자인 방향성을 추구합니다.  </p>  
+        
+        </div>
+
+   
+
+        <div class="second">  
+            <a href="mailto:minssior@gmail.com?subject=메일 제목&body=메일 내용"> 
+                <p> mail : minssior@gmail.com </p> </a>
+        </div>
+
+
+        
+        <div class="second-2">  
+            <a href="https://www.instagram.com/roissnim/"> 
+            <p> instagram : @roissnim</p> </a>
+        </div>
+
+        <div class="third">  
+            <a href="./1019.html">
+            <p> see all project ໒꒱*॰</p> </a>
+        </div>
+
+        <div class="fourth">  
+            <a href="./hi.html"> 
+            <p> 김민서 ᜊ(੭ ˊ ᵕˋ)੭ : ﾟ.+ </p> </a>
+        </div>
+
+
+
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+        <div class="circle5"></div>
+        <div class="circle6"></div>
+        <div class="circle7"></div>
+        <div class="circle8"></div>
+        <div class="m">  
+          <p> m</p> 
+        </div>
+        <div class="m-1">  
+            <p> i</p> 
+          </div>
+        <div class="m-2">  
+            <p> n</p> 
+          </div>
+          <div class="m-3">  
+            <p> s</p> 
+          </div>
+          <div class="m-4">  
+            <p> s</p> 
+          </div>
+          <div class="m-5">  
+            <p> i</p> 
+          </div>
+          <div class="m-6">  
+            <p> o</p> 
+          </div>
+          <div class="m-7">  
+            <p> r</p> 
+          </div>
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

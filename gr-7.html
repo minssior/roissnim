@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[아카이브!길카이브!아카이브! 부록 디자인]</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트2.png">
+    <link rel="stylesheet" href="./gr-7.css">
+    <link rel="stylesheet" href="./info-2.js">
+</head>
+<body>
+ 
+    <div class="background"></div>
+
+    <div class="main-3-1">[아카이브!길카이브!아카이브! 부록 디자인]</div>
+    <div class="main-3-1-1">7</div>
+    <a href="./graphic main.html" target="_self">
+        <div class="main-3-1-2">/8 of g ପ(๑•ᴗ•๑)ଓ</div> </a>
+
+        <img src="./main_map1.png"
+        alt="" 
+        class="mo-1" 
+        loading="lazy">
+        
+        <img src="./main_map2.png"
+        alt="" 
+        class="mo-2" 
+        loading="lazy">
+
+
+
+        <img src="./maps.gif" 
+        alt="" 
+        class="ne-7" 
+        loading="lazy">
+
+
+        <img src="./road2.png" 
+        alt="" 
+        class="info-1-2" 
+        loading="lazy">
+
+ 
+
+
+        <div class="main-3-2">
+            <p>2024</p>
+            <p>[정류장 레터링 포스터]</p>
+            <p>2p, single sided printing</p>
+            <p>297 * 420 X 6</p>
+        </div>
+
+
+        
+
+        <div class="main-3-3">
+
+            <p>
+                출판물 ‘아카이브! 길카이브! 아카이브!’를 위한 부록 디자인 작업입니다. 
+            </p>
+           
+      
+        </div>
+
+        
+    
+        <div class="main-3-4">
+    
+            <p>길을 돌아다니며 시선을 이끄는 길가 친구들을 아카이브한 출판물의 컨셉에 맞게 </p>
+            <p>지도 부록을 작업했습니다. 지도에는 서울 지도와 아카이빙한  </p>
+            <p>길가 친구들의 위치와 이름을 삽입하여 작업했습니다.  </p>
+ 
+         </div>
+
+    
+    
+        <div class="main-3-5">
+
+            <p >접지 지도 형태로 접어 출판물 뒤에 끼어두는 방식을 택해 </p>
+           <p>출판물과 연결되는 부록의 형태를 만들었습니다. </p>
+        
+        </div>
+
+
+        <img src="./maps edit-01.png"
+        alt="informationdesign1" 
+        class="ani-7" 
+        loading="lazy">
+        <img src="./mapsmaps.png"
+        alt="informationdesign1" 
+        class="ani-8" 
+        loading="lazy">
+        <img src="./road.png"
+        alt="informationdesign1" 
+        class="ani-9" 
+        loading="lazy">
+        <img src="./road2.png"
+        alt="informationdesign1" 
+        class="ani-10" 
+        loading="lazy">
+        <img src="./maps edit-02.png"
+        alt="informationdesign1" 
+        class="ani-11" 
+        loading="lazy">
+       
+
+
+        <p class="above-box2"></p>  
+        <p class="above-box3"></p>  
+        <p class="above-box4"></p>   
+        <p class="video-2">map graphic</p>  
+        <p class="video-3">studio pics *ˊᵕˋ</p>  
+        <p class="video-4">used graphics¸¸♪</p>  
+    
+
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

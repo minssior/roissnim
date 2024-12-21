@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brand design</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트.png">
+    <link rel="stylesheet" href="./brand main.css">
+    <link rel="stylesheet" href="./motion main.js">
+</head>
+<body>
+ 
+    <div class="background"></div>
+
+
+    <div class="main-3">[customizing arpron brand, TwiTwiClub]</div>
+
+    <div class="main-6">[Seoul Botanic park product redesign]</div>
+   
+    <img src="./ttc.png" 
+        alt="informationdesign1" 
+        class="ani-1" 
+        loading="lazy">
+    
+   
+
+    <img src="./pro.png" 
+        alt="informationdesign1" 
+        class="ani-3" 
+        loading="lazy">    
+        
+  
+   
+    <div class="main-1">6 </div>
+    <a href="./hi.html" target="_self">
+    <div class="main-2">/ 7</div>
+    </a>
+
+    <a href="./br-1.html" target="_self">
+    <div class="empty-box">
+      
+            <img src="./br/main_br.png"
+                 alt="informationdesign1" 
+                 class="info-1" 
+                 loading="lazy">
+       
+    
+    </div>
+</a>
+    <a href="./br-2.html" target="_self">
+    <div class="empty-box2"> 
+      
+        <img src="./main_pr.png" 
+          alt="informationdesign1" 
+          class="info-4" 
+          loading="lazy"> 
+
+        <img src="./pro2.png" 
+        alt="informationdesign1" 
+        class="s-1" 
+        loading="lazy">
+
+    </div>
+</a>
+
+
+
+
+    <a href="https://en.wikipedia.org/wiki/Branding" target="_self">
+    <div class="main">* brand design</div>
+    </a>
+  
+    
+    <a href="./br-1.html" target="_self">
+    <div class="main-3-1">
+        [customizing arpron brand, TwiTwiClub]</div>
+    </a>
+
+    <a href="./br-2.html" target="_self">
+    <div class="main-4-1">[Seoul Botanic park product redesign]</div>
+</a>
+
+
+
+
+
+
+ 
+
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

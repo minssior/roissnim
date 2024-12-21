@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./FreeMonospaced.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+    height: 100%; /* 전체 높이 설정 */
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+.circle1 {
+    position: absolute;
+    top: 47px;
+    left: 680px;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(240, 128, 128, 0);
+    border-radius: 50%;
+    border: 0.3px solid rgb(0, 0, 0); 
+    transition: background-color 0.3s ease;
+    z-index: 900;
+}
+
+.circle1:hover {
+    background-color: rgba(0, 0, 0, 0.501); /* 마우스 호버 시 배경색 */
+}
+
+.i-1 {
+    z-index: 300;
+    position: absolute;
+    top: 45px;
+    left: 718px;
+    font-size: 15px;
+    word-spacing: -5px; 
+    transition: font-weight 0.3s ease, text-shadow 0.3s ease;
+}
+.circle1:hover + .i-1 {
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+.circle2 {
+    z-index: 900;
+    position: absolute;
+    top: 535px;
+    left: 505px;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(240, 128, 128, 0);
+    border-radius: 50%;
+    border: 0.9px solid rgb(0, 0, 0); 
+    transition: background-color 0.3s ease;
+}
+
+.circle2:hover {
+    background-color: rgba(0, 0, 0, 0.501); /* 마우스 호버 시 배경색 */
+}
+
+.i-2 {
+    position: absolute;
+    top: 532px;
+    left: 400px;
+    font-size: 15px;
+    word-spacing: -5px; 
+    transition: font-weight 0.3s ease, text-shadow 0.3s ease;
+    z-index: 300;
+}
+.circle2:hover + .i-2 {
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.circle3 {
+    z-index: 900;
+    position: absolute;
+    top: 310px;
+    left: 882px;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(240, 128, 128, 0);
+    border-radius: 50%;
+    border: 0.3px solid rgb(0, 0, 0); 
+    transition: background-color 0.3s ease;
+}
+
+.circle3:hover {
+    background-color: rgba(0, 0, 0, 0.501); /* 마우스 호버 시 배경색 */
+}
+.i-3 {
+    position: absolute;
+    top: 308px;
+    left: 745px;
+    font-size: 15px;
+    word-spacing: -5px; 
+    transition: font-weight 0.3s ease, text-shadow 0.3s ease;
+    z-index: 300;
+}
+
+
+.circle3:hover + .i-3 {
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+.circle4 {
+    z-index: 900;
+    position: absolute;
+    top: 173px;
+    left: 917px;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(240, 128, 128, 0);
+    border-radius: 50%;
+    border: 0.3px solid rgb(0, 0, 0); 
+    transition: background-color 0.3s ease;
+}
+
+.circle4:hover {
+    background-color: rgba(0, 0, 0, 0.501); /* 마우스 호버 시 배경색 */
+}
+
+.i-4 {
+    z-index: 300;
+    position: absolute;
+    top: 170px;
+    left: 960px;
+    font-size: 15px;
+    word-spacing: -5px; 
+    transition: font-weight 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+.circle4:hover + .i-4 {
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+
+.circle5 {
+      z-index: 900;
+    position: absolute;
+    top: 290px;
+    left: 550px;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(240, 128, 128, 0);
+    border-radius: 50%;
+    border: 0.3px solid rgb(0, 0, 0); 
+    transition: background-color 0.3s ease;
+}
+
+.circle5:hover {
+    background-color: rgba(0, 0, 0, 0.501); /* 마우스 호버 시 배경색 */
+
+}
+
+.i-5 {
+    z-index: 300;
+    position: absolute;
+    top: 288px;
+    left: 310px;
+    font-size: 15px;
+    word-spacing: -5px; 
+    transition: font-weight 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+.circle5:hover + .i-5 {
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+a {
+    color: inherit; /* 부모 요소의 색상을 상속받도록 설정 */
+    text-decoration: none; /* 기본적으로 밑줄을 없앰 */
+}
+
+.circle6 {
+    z-index: 900;
+    position: absolute;
+    top: 745px;
+    left: 375px;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(240, 128, 128, 0);
+    border-radius: 50%;
+    border: 0.3px solid rgb(0, 0, 0); 
+    transition: background-color 0.3s ease;
+}
+
+.i-6 {
+    z-index: 300;
+    position: absolute;
+    top: 744px;
+    left: 180px;
+    font-size: 15px;
+    word-spacing: -5px; 
+    transition: background-color 0.3s ease;
+}
+
+.circle6:hover + .i-6 {
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.circle6:hover {
+    background-color: rgba(0, 0, 0, 0.501); /* 마우스 호버 시 배경색 */
+}
+
+.circle7 {
+    z-index: 900;
+    position: absolute;
+    top: 645px;
+    left: 1060px;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(240, 128, 128, 0);
+    border-radius: 50%;
+    border: 0.3px solid rgb(0, 0, 0); 
+    transition: background-color 0.3s ease;
+}
+
+.i-7 {
+    z-index: 300;
+    position: absolute;
+    top: 670px;
+    left: 935px;
+    font-size: 15px;
+    word-spacing: -5px; 
+    transition: font-weight 0.3s ease, text-shadow 0.3s ease;
+}
+.circle7:hover + .i-7 {
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.circle7:hover {
+    background-color: rgba(0, 0, 0, 0.501); /* 마우스 호버 시 배경색 */
+}
+
+.circle8 {
+    z-index: 900;
+    position: absolute;
+    top: 418px;
+    left: 964px;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(240, 128, 128, 0);
+    border-radius: 50%;
+    border: 0.3px solid rgb(0, 0, 0); 
+    transition: background-color 0.3s ease;
+}
+
+
+.i-8 {
+    z-index: 300;
+    position: absolute;
+    top: 382px;
+    left: 935px;
+    font-size: 15px;
+    word-spacing: -5px; 
+    transition: font-weight 0.3s ease, text-shadow 0.3s ease;
+}
+.circle8:hover + .i-8 {
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.circle8:hover + .i-9 {
+    font-weight: 900;
+    text-shadow: 0 0 10px rgb(0, 255, 179);
+}
+
+.circle8:hover {
+    background-color: rgba(0, 0, 0, 0.501); /* 마우스 호버 시 배경색 */
+}
+
+
+/*
+.gif-1 {
+    z-index: 200;
+    position: relative;
+    top: 920px;
+    left: 530px;
+    display: block;
+    transform: scale(0.13); /* 크기 조정, 0.5는 50% 
+    transform-origin: top left;
+} 
+*/
+
+
+.gif-2 {
+    z-index: 200;
+    position: relative;
+    top: 0px;
+    left: 830px;
+    display: block;
+    transform: scale(0.16); /* 크기 조정, 0.5는 50% */
+    transform-origin: top left;
+}
+
+.gif-3 {
+    z-index: 200;
+    position: relative;
+    top: 0px;
+    left: 830px;
+    display: block;
+  
+    transform-origin: top left;
+    transform: scale(0.3) rotate(180deg);
+}
+
+.gif-4 {
+    z-index: 200;
+    position: relative;
+    top: 0px;
+    left: 830px;
+    display: block;
+  
+    transform-origin: top left;
+    transform: scale(0.12) rotate(180deg);
+}
+
+.gif-8 {
+    z-index: 200;
+    position: relative;
+    top: 0px;
+    left: 830px;
+    display: block;
+  
+    transform-origin: top left;
+    transform: scale(0.2) rotate(24deg);
+}
+
+
+.gif-5 {
+    z-index: 200;
+    position: relative;
+    top: 0px;
+    left: 830px;
+    display: block;
+  
+    transform-origin: top left;
+    transform: scale(0.12) rotate(20deg);
+}
+
+.gif-6 {
+    z-index: 200;
+    position: relative;
+    top: 0px;
+    left: 830px;
+    display: block;
+  
+    transform-origin: top left;
+    transform: scale(0.2) rotate(50deg);
+}
+
+.gif-7 {
+    z-index: 200;
+    position: relative;
+    top: 0px;
+    left: 830px;
+    display: block;
+  
+    transform-origin: top left;
+    transform: scale(0.4) rotate(10deg);
+}
+.gif-4, .gif-2, .gif-3 , .gif-5, .gif-6, .gif-7, .gif-8{
+    position: absolute; /* absolute 위치 지정 */
+}
+
+
+
+
+
+.background {
+    background-image: url('./main_edit1.png'); /* 배경 이미지 설정 */
+    background-size: cover; /* 이미지를 화면에 맞게 늘리기 */
+    background-position: center; /* 이미지 중앙 정렬 */
+    width: 100%; /* 전체 너비 설정 */
+    height: 100%; /* 전체 높이 설정 */
+    position: fixed; /* 고정 위치 설정 */
+    z-index: -1; /* 다른 요소들 뒤에 위치 */   
+    opacity: 0.7;
+
+}
+
+.trail {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background:black;
+    border: 0.1px dotted black;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+

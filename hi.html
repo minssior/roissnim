@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트.png">
+    <link rel="stylesheet" href="./hi.css">
+   
+</head>
+<body>
+    <div class="background"></div>
+
+
+    <a href="./type main.html" target="_self">
+    <div class="circle1"></div>
+    <div class="i-1">typographic design</div>
+    </a>
+
+    <a href="./web-main.html" target="_self">
+    <div class="circle2"></div>
+    <div class="i-2">web design</div>
+    </a>
+    
+    <a href="./graphic main.html" target="_self">
+    <div class="circle3"></div>
+    <div class="i-3">graphic design</div>
+
+</a>
+    <a href="./edit main.html" target="_self">
+    <div class="circle4"></div>
+    <div class="i-4">editorial design</div>
+</a>
+
+<a href="./information.html" target="_self">
+    <div class="circle5"></div>
+    <div class="i-5">informationgraphic design</div>
+</a>
+
+<a href="./motion main.html" target="_self">
+    <div class="circle6"></div>
+    <div class="i-6">motiongraphic design</div>
+</a>    
+
+
+<a href="./brand main.html" target="_self">
+    <div class="circle7"></div>
+    <div class="i-7">brand design & product design</div>
+</a>
+<a href="./1019.html" target="_self">
+    <div class="circle8"></div>
+    <div class="i-8">see all ໒꒱*॰</div>
+</a>
+    
+<!-- <div class="gif-1">
+<img src="./Comp 1.gif" alt="Loading animation" />
+</div>
+-->
+
+<div class="gif-2">
+    <a href="./roissnim.html" target="_self">
+    <img src="./hib.gif" alt="Loading animation" />
+</a>
+    </div>
+
+
+<div class="gif-3">
+    <a href="./roissnim.html" target="_self">
+    <img src="./hib.gif" alt="Loading animation" />
+</a>
+    </div>
+
+<div class="gif-4">
+    <a href="./roissnim.html" target="_self">
+    <img src="./hib.gif" alt="Loading animation" />
+</a>
+    </div>
+    
+<div class="gif-8">
+        <a href="./roissnim.html" target="_self">
+        <img src="./hib.gif" alt="Loading animation" />
+    </a>
+        </div>    
+
+
+<div class="gif-5">
+    <a href="./roissnim.html" target="_self">
+    <img src="./hi.gif" alt="Loading animation" />
+</a>
+    </div>   
+
+  
+ <div class="gif-6">
+    <a href="./roissnim.html" target="_self">
+    <img src="./roissnim.gif" alt="Loading animation" />
+   </a>
+    </div>       
+            
+<div class="gif-7">
+        <a href="./roissnim.html" target="_self">
+        <img src="./roissnim.gif" alt="Loading animation" />
+       </a>
+        </div>       
+                
+    
+
+    <script>
+
+window.onload = function() {
+    function randomizePosition(element) {
+        // 화면 경계를 넘지 않기 위한 최대 x, y 좌표 계산
+        const maxX = window.innerWidth - element.offsetWidth;
+        const maxY = window.innerHeight - element.offsetHeight;
+        
+        // 0에서 maxX 및 maxY 사이의 무작위 위치를 생성
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
+        
+        // 요소의 위치를 무작위로 변경
+        element.style.left = `${randomX}px`;
+        element.style.top = `${randomY}px`;
+    }
+
+    // 각 gif 요소의 위치를 무작위로 설정
+
+    const gif2 = document.querySelector('.gif-2');
+    const gif3 = document.querySelector('.gif-3');
+    const gif4 = document.querySelector('.gif-4');
+    const gif5 = document.querySelector('.gif-5');
+    const gif6 = document.querySelector('.gif-6');
+    const gif7 = document.querySelector('.gif-7');
+    const gif8 = document.querySelector('.gif-8');
+  
+    randomizePosition(gif2);
+    randomizePosition(gif3);
+    randomizePosition(gif4);
+    randomizePosition(gif5);
+    randomizePosition(gif6);
+    randomizePosition(gif7);
+    randomizePosition(gif8);
+};
+
+    
+</script>
+
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

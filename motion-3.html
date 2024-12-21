@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[lyrics project video for Hangeul Day]</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트2.png">
+    <link rel="stylesheet" href="./motion-3.css">
+    <link rel="stylesheet" href="./motion-3.js">
+</head>
+<body>
+ 
+    <div class="background"></div>
+
+    <div class="main-3-1">[lyrics project video for Hangeul Day]</div>
+    <div class="main-3-1-1">3</div>
+    <a href="./motion main.html" target="_self">
+        <div class="main-3-1-2">/3 of m ♪҉*\( ・ω・ )/♪*҉</div> </a>
+
+        <video controls width="600" class="vtest">
+            <source src="./김민서_코엑스.mp4" type="video/mp4">
+            <source src="sample.ogg" type="video/ogg">
+            브라우저가 이 비디오를 지원하지 않습니다.
+          </video>
+          
+
+          <img class="new-image" src="./음표2.png" alt="New Image" onclick="playAudio()">
+  
+          <!-- 오디오 요소 -->
+          <audio id="background-audio" src="./Feel My Rhythm.mp3"></audio>
+
+          <div class="bgm"> ⇠‧˚₊⁎⁺click and fill the rhythm..</div>
+        
+        <video controls width="600" class="vtest2">
+            <source src="./김민서_코엑스.mp4" type="video/mp4">
+            <source src="sample.ogg" type="video/ogg">
+            브라우저가 이 비디오를 지원하지 않습니다.
+          </video>  
+
+  
+       
+
+       
+          <div class="main-3-2">
+            <p>2022</p>
+            <p>[lyrics project video for Hangeul Day]</p>
+            <p>video, 3s</p>
+            <p>1440 * 2560 (px)</p>
+        </div>
+
+     
+
+
+        <div class="main-3-3">
+            <p>
+                중앙일보와 함께 진행한 한글날 프로젝트입니다.
+            </p>
+            <p>
+                K-pop 영어 가사를 한글로 바꾸어 레터링하는 것을 주제로 진행한 프로젝트로, 
+            </p>
+            <p>
+                레드벨벳의 노래     <a href="
+                https://www.youtube.com/watch?v=R9At2ICm4LQs" 
+                 target="_self"  class="highlight-link2">Feel My Rhythm의</a>
+                 가사 중 feel my rhythm을 한글로 바꾸어 레터링 작업을 했습니다.
+            </p>
+         </div>
+
+
+         <div class="main-3-4">
+            <p>노래가 가지고 있는 환상적이고 동화같은 느낌을 살리고 </p>
+            <p>음표의 형태들이 담겨있는 레터링과 모션그래픽 작업을 진행했습니다. </p>
+        </div>
+
+        <div class="main-3-4-1">
+            <p>작업물은 한글날을 기념하여 </p>
+            <a href="
+            https://www.instagram.com/p/CkILrzKvp79/" 
+             target="_self"  class="highlight-link2">
+            <p>코엑스 & 파르나스 미디어 타워 옥외매체에</a> 송출되었습니다. </p>
+ 
+        </div>
+
+         
+        <img src="./선.png" 
+          alt="informationdesign1" 
+          class="feel" 
+          loading="lazy"> 
+
+          <img src="./선.png" 
+          alt="informationdesign1" 
+          class="feel2" 
+          loading="lazy"> 
+
+          <img src="./빛.png" 
+          alt="informationdesign1" 
+          class="feel3" 
+          loading="lazy"> 
+
+          <img src="./butterfly.png" 
+          alt="informationdesign1" 
+          class="feel4" 
+          loading="lazy"> 
+
+
+          <img src="./음~.png" 
+          alt="informationdesign1" 
+          class="feel5" 
+          loading="lazy"> 
+
+          <img src="./detail.png" 
+          alt="informationdesign1" 
+          class="feel6" 
+          loading="lazy"> 
+
+          <img src="./내3흐름을.png" 
+          alt="informationdesign1" 
+          class="feel7" 
+          loading="lazy"> 
+
+
+          <audio controls>
+            <source src="./Feel My Rhythm.mp3" type="audio/mp3">
+            브라우저가 오디오 태그를 지원하지 않습니다.
+        </audio>
+
+
+
+        <p class="video-1">final image </p>  
+        <p class="video-2">note graphics ♩♪♬</p> 
+        <p class="video-4">lettering detail</p> 
+        <p class="video-5"> (੭ ˊ ᵕˋ)੭ used music ♪ </p> 
+
+        <p class="above-box5"></p>
+        <p class="above-box4"></p>
+        <p class="above-box3"></p>
+        <p class="above-box2"></p>
+
+
+
+
+
+
+
+
+           
+
+  <script>
+    function playAudio() {
+      const audio = document.getElementById('background-audio');
+      if (audio.paused) {
+        audio.play();  // 재생
+      } else {
+        audio.pause(); // 일시 정지
+        audio.currentTime = 0; // 처음부터 재생
+      }
+    }
+  </script>
+
+
+    
+
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

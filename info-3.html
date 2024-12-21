@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[statistical translation project]</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트2.png">
+    <link rel="stylesheet" href="./info-3.css">
+</head>
+<body>
+ 
+    <div class="background"></div>
+
+    <div class="main-3-1">[statistical translation project]</div>
+    
+    <div class="main-3-1-1">3</div>
+    <a href="./information.html" target="_self">
+        <div class="main-3-1-2">/4 of i ♪˙˚ʚ('◡')ɞ˚˙</div> </a>
+
+     
+        <img src="./main_i3.png" 
+        alt="informationdesign1" 
+        class="info-1" 
+        loading="lazy">
+
+        <img src="./main_i3.png" 
+        alt="informationdesign1" 
+        class="info-1-1" 
+        loading="lazy">
+
+        <img src="./요소 수정3.png" 
+        alt="informationdesign1" 
+        class="info-1-2" 
+        loading="lazy">
+
+        <div class="main-3-2">
+            <p>2023</p>
+            <p>[statistical translation project]</p>
+            <p>rgb printing</p>
+            <p>594 * 1682</p>
+        </div>
+        <p class="above-box"></p>  
+        
+
+
+
+
+
+        <div class="main-3-3">
+            <a href=" https://stat.me.go.kr/portal/stat/easyStatPage.do" target="_blank">
+            <p>2022년 기준 통계청 데이터를 시각화하는 것을 목표로 진행한 프로젝트입니다. </p>
+        </a>
+        </div>
+
+
+        <div class="main-3-4">
+    
+            <p>대주제는 ‘환경보호에 대한 관심도’로 설정했으며, </p>
+            <p>환경오염 방지 노력과 생활 환경 변화 예상 등의 항목으로 세분화했습니다.   </p>
+            <p>또한 성별과 나이대를 기준으로 다양한 관점에서 환경보호에 대한 현황을 </p>
+            <p>살펴볼 수 있도록 작업했습니다.  </p>
+
+        </div>
+    
+      
+    
+        <div class="main-3-5">
+
+            <p >양 옆에는 프로젝트를 진행하며 제가 가졌던 편견과 관점이 변화하는 과정을</p>
+        
+            
+            <p> 가감 없이 담은 ‘사족’을 추가해 재미를 더하고자 했습니다.</p>
+     
+           
+        </div>
+
+
+        <p class="above-box1"></p>  
+        <p class="above-box2"></p>  
+        
+        <p class="video-1">my highlighted graphs </p>  
+        <p class="video-2">my side note ･̀ᵕ･́ </p>  
+
+        <iframe src="./통계 사족 자료.pdf" 
+        class="custom-iframe"></iframe> </iframe>
+
+
+        <img src="./통계 강조용 자료_대지 1.png" 
+        alt="informationdesign1" class="i3 i3-1" loading="lazy">
+   
+   <img src="./통계 강조용 자료-02.png" 
+        alt="informationdesign1" class="i3 i3-2" loading="lazy">
+   
+   <img src="./통계 강조용 자료-04.png" 
+        alt="informationdesign1" class="i3 i3-3" loading="lazy">
+   
+   <img src="./통계 강조용 자료-03.png" 
+        alt="informationdesign1" class="i3 i3-4" loading="lazy">
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>

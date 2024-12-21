@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[TROEL project]</title>
+    <link rel="icon" type="image/png" 
+    sizes="32x32" href="./파비콘 테스트2.png">
+    <link rel="stylesheet" href="./web-1.css">
+    <link rel="stylesheet" href="./info-2.js">
+</head>
+<body>
+ 
+    <div class="background"></div>
+
+    <div class="main-3-1">[TROEL project]</div>
+    <div class="main-3-1-1">1</div>
+    <a href="./web-main.html" target="_self">
+        <div class="main-3-1-2">/1 of w ₊·*◟(⌯ˇ - ˇ⌯)◜‧*</div> </a>
+
+    
+       
+           
+        <img src="./qrcode_151126694_01eda32e97c5b06d457aae52f368f954.png" 
+        alt="" 
+        class="mo-2" 
+        loading="lazy">
+
+        <video class="mo-3" controls autoplay loop muted>
+            <source src="./final.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+
+
+        <img src="./luck.png" 
+        alt="" 
+        class="mo-4" 
+        loading="lazy">
+
+
+        <img src="./(02) behind.png" 
+        alt="" 
+        class="mo-5" 
+        loading="lazy">
+
+      
+
+
+       
+
+
+ 
+
+
+
+        <div class="main-3-2">
+            <p>2023</p>
+            <p>[TROEL project]]</p>
+        </div>
+
+
+   
+
+
+      
+
+        <div class="main-3-3">
+
+            <p>
+            TROELP는 텍스트를 활용해 구성된 프로젝트로, 
+            </p>
+           
+            <p>
+                순간의 진심과 소중한 다정함이 우리를 버티게 한다는 생각에서 시작되었습니다.
+                </p>
+               
+      
+        </div>
+
+        
+    
+        <div class="main-3-4">
+    
+            <p>이 프로젝트는 지금까지 받았던 편지들의 텍스트를 재료 삼아 분석한 결과물입니다. </p>
+            <p>페이지의 구성은 메인 페이지와 총 5개의 편지 봉투와 텍스트 분석 페이지,  </p>
+            <p>TROELP 사용 설명서, 프로젝트 제작 이유 및 사용자 아카이빙 페이지로 구성되어 있습니다.  </p>
+         
+         </div>
+
+    
+    
+        <div class="main-3-5">
+
+            <p>TROELP는 편지의 따뜻한 감정을 기록하고 공유하는 공간으로 만들고자 했습니다. </p>
+       
+        </div>
+
+        <a href="https://minssior.github.io/TROELP/index.html" target="_self">
+        <div class="main-3-6">
+
+            <p>ᜊ( ᜊ ´ ˘) ੭ scan the QR code..*ˊᵕˋ </p>
+       
+        </div>
+        </a>
+
+      
+    
+
+<script>
+    let isScaled = false;
+
+  
+    document.addEventListener('mousemove', function(e) {
+        let scale = isScaled ? 0.42 : 1; // 현재 스케일에 따라 보정
+        const adjustedX = e.pageX / scale;
+        const adjustedY = e.pageY / scale;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = adjustedX + 'px';
+        trail.style.top = adjustedY + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.style.opacity = '0';
+        }, 10);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 510);
+    });
+</script>
+</body>
+</html>
