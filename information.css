@@ -472,7 +472,7 @@ a {
 }
 
 .background {
-    background-image: url(./인포\ 전체\ 배경-03.png); /* 배경 이미지 설정 */
+    background-image: url(./info_whole_background.png); /* 배경 이미지 설정 */
     background-size: cover; /* 이미지를 화면에 맞게 늘리기 */
     background-position: center; /* 이미지 중앙 정렬 */
     width: 100%; /* 전체 너비 설정 */
